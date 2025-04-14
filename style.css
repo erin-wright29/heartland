@@ -30,3 +30,8 @@ body {
     line-height: 2;
 }
 
+.main-title-welcome-to-heartland {
+    font-family: 'PixelCastleReg';
+    font-size: 2.5rem;
+    color: #f8acc8;
+}
