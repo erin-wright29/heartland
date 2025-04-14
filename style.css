@@ -36,3 +36,10 @@ body {
     font-size: 2.5rem;
     color: #f8acc8;
 }
+
+.subtitle {
+    text-align: center;
+    font-family: 'PixelCastleReg';
+    font-size: 1.2rem;
+    color: #006def;
+}
