@@ -25,7 +25,7 @@ body {
 
 .decorated-title {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 1.4rem;
     color: #006def;
     line-height: 2;
 }
@@ -33,7 +33,7 @@ body {
 .main-title-welcome-to-heartland {
     text-align: center;
     font-family: 'PixelCastleReg';
-    font-size: 1.4rem;
+    font-size: 2.5rem;
     color: #f8acc8;
 }
 
