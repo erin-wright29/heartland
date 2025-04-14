@@ -16,7 +16,7 @@ body {
 
 .page-wrapper {
     max-width: 1000px;
-    min-height: ;
+    min-height: 25vh;
     align-items: center;
     width: 95%;
     margin: 60px auto;
