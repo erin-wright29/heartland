@@ -17,6 +17,7 @@ body {
 
 .page-wrapper {
     max-width: 1000px;
+    align-items: center;
     width: 95%;
     margin: 60px auto;
     padding: 80px;
