@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'PixelCastleReg';
-    src: url('assets/fonts/Pixelcastle-Regular-copy.otf')
+    src: url('assets/fonts/Pixelcastle-Regular-copy.otf');
 }
 
 body {
@@ -11,41 +11,131 @@ body {
     background-color: #f8acc8;
     font-family: 'PixelCastleReg';
     color: black;
-    border: 4px #f8acc8;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    width: 90%;
   }
 
 .page-wrapper {
-    max-width: 900px;
+        max-width: 800px;
+        width: 85%;
+        max-height: 500px;
+        height: 500px;
+        margin: 20px auto;
+        padding: 1rem;
+        background-color: #fdfbfb;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    width: 80%;
-    margin: 60px auto;
-    padding: 3rem;
-    background-color: #fdfbfb;
-    text-align: center;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
+ }
+
+ .content-inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .decorated-title, .main-title, .subtitle, .enter-button, .enter-section, .roses img, .nav-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
 
 .decorated-title {
-    text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
     color: #006def;
     line-height: 2;
 }
 
-.main-title-welcome-to-heartland {
-    text-align: center;
-    font-family: 'PixelCastleReg';
-    font-size: 2.5rem;
+.main-title {
+    font-size: 3rem;
+    margin: 0.5rem 0;
     color: #f8acc8;
 }
 
 .subtitle {
-    text-align: center;
-    font-family: 'PixelCastleReg';
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    margin: 0.5rem 0 1rem;
     color: #006def;
+}
+
+.enter-button {
+    display: inline-block;
+    margin: 0.5rem 0;
+    padding: 0.5rem 1.5rem;
+    background: #f8acc8;
+    color: #fdfbfb;
+    border: 2px solid #f8acc8;
+    border-radius: 2px;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: transform: 0.2 ease;
+}
+
+.enter-button:hover {
+    transform: scale(1.05);
+}
+
+.enter-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin: 1rem 0;
+ }
+
+
+.roses img {
+    width: 80px;
+    margin-top: 1rem;
+    height: auto;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 1rem 0;
+}
+
+.nav-buttons img {
+    width: 100px;
+    border-radius: 2px;
+    border: 2px solid #ddd;
+    transition: opacity 0.3s ease;
+}
+
+.nav-buttons img:hover {
+opacity: 0.8;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    color: #fdfbfb;
+}
+
+marquee {
+    margin-top: 1rem;
+    padding: 0.5rem 0;
+    color: #006def;
+    font-size: 1.2rem;
+}
+
+.transparent-image-holder {
+    width: 100px;
+    height: 100px;
+    display: flex;
 }
