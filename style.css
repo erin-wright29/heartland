@@ -24,7 +24,7 @@ body {
         max-height: 500px;
         height: 500px;
         margin: 20px auto;
-        padding: 1rem;
+        padding: 2rem 1rem 1rem;
         background-color: #fdfbfb;
         text-align: center;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
@@ -35,12 +35,14 @@ body {
     align-items: center;
  }
 
+
  .content-inner {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    margin-top: 7.5rem;
  }
 
  .decorated-title, .main-title, .subtitle, .enter-button, .enter-section, .roses img, .nav-buttons {
@@ -82,36 +84,39 @@ body {
     transition: transform: 0.2 ease;
 }
 
+.enter-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 1rem 0;
+    width: 100%;
+    max-width: 800px;
+ }
+
 .enter-button:hover {
     transform: scale(1.05);
 }
 
-.enter-section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-        margin: 1rem 0;
- }
-
 
 .roses img {
     width: 80px;
-    margin-top: 1rem;
     height: auto;
 }
 
 .nav-buttons {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 4.5rem;
     margin: 1rem 0;
+    width: 100%;
+    max-width: 800px;
 }
 
 .nav-buttons img {
     width: 100px;
     border-radius: 2px;
-    border: 2px solid #ddd;
+    border: 2px solid #f8acc8;
     transition: opacity 0.3s ease;
 }
 
@@ -124,7 +129,7 @@ footer {
     margin-top: 2rem;
     padding: 1rem 0;
     font-size: 0.9rem;
-    color: #fdfbfb;
+    color: #f8acc8;
 }
 
 marquee {
