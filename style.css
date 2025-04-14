@@ -16,9 +16,10 @@ body {
   }
 
 .page-wrapper {
-    max-width: 800px;
+    max-width: 1000px;
+    width: 95%;
     margin: 60px auto;
-    padding: 40px;
+    padding: 80px;
     background-color: #fdfbfb;
     border-style:none
 }
