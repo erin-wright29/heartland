@@ -12,11 +12,6 @@ body {
     margin: auto;
     border: 4px #f8acc8;
     width: 90%;
-    max-width: 800px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
   }
 
 .page-wrapper {
