@@ -1,15 +1,19 @@
+@font-face {
+    font-family: 'PixelCastleReg';
+    src: url('assets/fonts/Pixelcastle-Regular-copy.otf')
+}
+
 body {
-    background-image: url('assets/background/2bfbg\ copy.jpg');
+    background-image: url('assets/background/2bfbg-copy.jpg');
     background-repeat: repeat;
     background-color: #f8acc8;
     font-family: 'PixelCastleReg';
-    src: url('/Users/erinwright/Desktop/heartland/assets/fonts/Pixelcastle-Regular copy.otf');
     color: black;
     margin: auto;
     border: 4px #f8acc8;
     width: 90%;
     max-width: 800px;
-}
+  }
 
 .page-wrapper {
     max-width: 800px;
