@@ -4,25 +4,29 @@
 }
 
 body {
+    margin: 0;
+    padding: 0;
     background-image: url('assets/background/2bfbg-copy.jpg');
     background-repeat: repeat;
     background-color: #f8acc8;
     font-family: 'PixelCastleReg';
     color: black;
-    margin: auto;
     border: 4px #f8acc8;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     width: 90%;
   }
 
 .page-wrapper {
-    max-width: 1000px;
-    min-height: 25vh;
+    max-width: 900px;
     align-items: center;
-    width: 95%;
+    width: 80%;
     margin: 60px auto;
-    padding: 80px;
+    padding: 3rem;
     background-color: #fdfbfb;
-    border-style:none
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .decorated-title {
