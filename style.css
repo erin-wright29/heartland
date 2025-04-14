@@ -22,4 +22,11 @@ body {
     background-color: #e5e6e3;
     border-style:double
 }
-      
+
+.decorated-title {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #006def;
+    line-height: 2;
+}
+
