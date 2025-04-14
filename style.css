@@ -158,9 +158,9 @@ marquee {
 
 .spiral-image {
     position: absolute;
-    top: 180px;
-    left: 305px;
-    width: 200px;
+    top: 150px;
+    left: 330px;
+    width: 190px;
     height: auto;
     z-index: 1;
     max-width: calc(100vw - 20px);
@@ -169,9 +169,9 @@ marquee {
 
 .deer-image {
     position: absolute;
-    top: 230px;
-    left: 300px;
-    width: 320px;
+    top: 202px;
+    left: 350px;
+    width: 275px;
     height: auto;
     z-index: 2;
     max-width: calc(100vw - 20px);
@@ -187,6 +187,18 @@ height: auto;
 z-index: 3;
 pointer-events: none;
 }
+
+.hooves-image {
+position: absolute;    
+bottom: 145px;
+right: 380px;
+width: 350px;
+height: auto;
+z-index: 3;
+pointer-events: none;
+}
+
+
 
 .image-wrapper {
     position: absolute;
