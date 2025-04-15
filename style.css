@@ -2,10 +2,12 @@
     font-family: 'PixelCastleReg';
     src: url('assets/fonts/Pixelcastle-Regular-copy.otf');
 }
+
 @font-face {
-    font-family: 'LiberationSans-Italic';
-    src: url(assets/fonts/LiberationSans-Italic.ttf);
+    font-family: 'LiberationSans-Regular';
+    src: url(assets/fonts/LiberationSans-Regular.ttf);
 }
+
 html, body {
     width: 100%;
     height: 100%;
@@ -13,8 +15,8 @@ html, body {
     padding: 0;
     overflow: hidden;
     overscroll-behavior: none;
-  }
-  
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -29,41 +31,38 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-  }
+}
 
 .page-wrapper {
-        max-width: 800px;
-        width: 85%;
-        max-height: 500px;
-        height: 500px;
-        margin: 20px auto;
-        padding: 2rem 1rem 1rem;
-        background-color: #fdfbfb;
-        text-align: center;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-        position: relative;
-
+    width: 85%;
+    max-width: 800px; /* Ensures it's consistent */
+    height: 500px;    /* Ensures the same height */
+    margin: 20px auto;
+    padding: 2rem 1rem 1rem;
+    background-color: #fdfbfb;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
- }
+}
 
-
- .content-inner {
+.content-inner {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 7.5rem;
- }
+}
 
- .decorated-title, .main-title, .subtitle, .enter-button, .enter-section, .roses img, .nav-buttons {
+.decorated-title, .main-title, .subtitle, .enter-button, .enter-section, .roses img, .nav-buttons {
     display: flex;
     justify-content: center;
     align-items: center;
- }
+}
 
 .decorated-title {
     font-size: 1.5rem;
@@ -92,27 +91,16 @@ body {
     color: #fdfbfb;
     border: 2px solid #f8acc8;
     border-radius: 2px;
-    font-family: 'LiberationSans-Italic';
+    font-family: 'LiberationSans-Regular';
     text-decoration: none;
     font-size: 1.2rem;
-    transition: transform: 0.2 ease;
+    transition: transform 0.2s ease;
     box-shadow: 0 0 12px #f8acc8, 0 0 24px #f8acc8;
 }
-
-.enter-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    margin: 1rem 0;
-    width: 100%;
-    max-width: 800px;
- }
 
 .enter-button:hover {
     transform: scale(1.05);
 }
-
 
 .roses img {
     width: 80px;
@@ -135,10 +123,9 @@ body {
     transition: opacity 0.3s ease;
 }
 
-
 .nav-buttons img:hover {
-opacity: 0.8;
-box-shadow: 0 0 16px #f8acc8, 0 0 32px #f8acc8;
+    opacity: 0.8;
+    box-shadow: 0 0 16px #f8acc8, 0 0 32px #f8acc8;
 }
 
 footer {
@@ -147,6 +134,15 @@ footer {
     padding: 1rem 0;
     font-size: 0.9rem;
     color: #f8acc8;
+}
+
+footer p {
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+footer p:hover {
+    color: #006def;
+    text-decoration: underline;
 }
 
 marquee {
@@ -184,26 +180,26 @@ marquee {
     max-height: calc(100vh - 20px);
     pointer-events: none;
 }
+
 .mirror-image {
-position: absolute;    
-bottom: 45px;
-right: 350px;
-width: 250px;
-height: auto;
-z-index: 3;
-pointer-events: none;
+    position: absolute;
+    bottom: 45px;
+    right: 350px;
+    width: 250px;
+    height: auto;
+    z-index: 3;
+    pointer-events: none;
 }
 
 .hooves-image {
-position: absolute;    
-bottom: 145px;
-right: 380px;
-width: 350px;
-height: auto;
-z-index: 3;
-pointer-events: none;
+    position: absolute;
+    bottom: 145px;
+    right: 380px;
+    width: 350px;
+    height: auto;
+    z-index: 3;
+    pointer-events: none;
 }
-
 
 .image-wrapper {
     position: absolute;
@@ -243,32 +239,135 @@ body {
     height: 100%;
     overflow: hidden;
     position: relative;
-  }
-  
-  .nav-header {
+}
+
+.nav-header {
     display: flex;
     justify-content: center;
     gap: 1.2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem; 
     width: 100%;
     padding-top: 0.5rem;
-  }
-  
-  .nav-header a {
+    font-size: 0.8rem; 
+}
+
+.nav-header a {
     font-family: 'PixelCastleReg', monospace;
-    font-size: 0.95rem;
+    font-size: 0.9rem; 
     color: #f8acc8;
     text-decoration: none;
-    padding: 0.2rem 0.6rem;
+    padding: 0.2rem 0.5rem; 
     border-radius: 4px;
     box-shadow: 0 0 4px #f8acc8;
     transition: all 0.2s ease;
-  }
-  
-  .nav-header a:hover {
+}
+
+.nav-header a:hover {
     color: #ffffff;
     text-shadow: 0 0 4px #f8acc8;
-  }
-  
-  
-  
+}
+
+.category-btn.active {
+    background-color: #006def;
+    color: #fff;
+    box-shadow: 0 0 12px #006def, 0 0 24px #006def;
+    transform: scale(1.05);
+}
+
+.category-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 1rem 0;
+    padding: 0;
+    width: 90%; 
+    max-width: 700px
+}
+
+.category-btn {
+    display: block;
+    padding: 0.8rem 1.5rem; 
+    font-size: 0.9rem; 
+    background-color: #f8acc8;
+    color: #fdfbfb;
+    font-family: 'LiberationSans-Regular';
+    text-decoration: none;
+    border: 2px solid #f8acc8;
+    border-radius: 4px;
+    text-align: center;
+    transition: transform 0.2s ease;
+    width: 150px;
+}
+
+.category-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #f8acc8, 0 0 20px #f8acc8;
+}
+
+.category-btn img {
+    width: 100%;
+    height: 80px; 
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+.category-btn span {
+    display: block;
+    font-size: 1rem; 
+    color: #006def;
+    font-family: 'LiberationSans-Regular';
+}
+
+#collection-page .page-wrapper {
+    max-width: 800px;
+    width: 85%;
+    height: 500px;
+    margin: 20px auto;
+    padding: 2rem 1rem 1rem;
+    background-color: #fdfbfb;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#collection-page .content-inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7.5rem;
+}
+
+#collection-page footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    color: #f8acc8;
+}
+
+footer p {
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+footer p:hover {
+    color: #006def;
+    text-decoration: underline;
+}
+
+#collection-page .small-dog-btn {
+    max-width: 70px;
+    max-height: 70px;
+    object-fit: cover;
+    transition: all 0.2s ease;
+}
+
+#collection-page .small-dog-btn:hover {
+    filter: drop-shadow(0 0 10px #ffe4e1);
+}
