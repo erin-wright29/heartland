@@ -93,7 +93,7 @@ body {
     border-radius: 2px;
     font-family: 'LiberationSans-Regular';
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.5 rem;
     transition: transform 0.2s ease;
     box-shadow: 0 0 12px #f8acc8, 0 0 24px #f8acc8;
 }
@@ -317,7 +317,9 @@ body {
     transform: scale(1.05);
     box-shadow: 0 0 10px #f8acc8, 0 0 20px #f8acc8;
 }
-
+.category-btn:hover span {
+    text-decoration: underline;
+  }  
 .category-btn img {
     width: 100%;
     height: 80px;
