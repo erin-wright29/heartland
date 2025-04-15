@@ -93,6 +93,7 @@ body {
     text-decoration: none;
     font-size: 1.2rem;
     transition: transform: 0.2 ease;
+    box-shadow: 0 0 12px #f8acc8, 0 0 24px #f8acc8;
 }
 
 .enter-section {
@@ -131,8 +132,10 @@ body {
     transition: opacity 0.3s ease;
 }
 
+
 .nav-buttons img:hover {
 opacity: 0.8;
+box-shadow: 0 0 16px #f8acc8, 0 0 32px #f8acc8;
 }
 
 footer {
@@ -239,4 +242,31 @@ body {
     overflow: hidden;
     position: relative;
   }
+  
+  .nav-header {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    padding-top: 0.5rem;
+  }
+  
+  .nav-header a {
+    font-family: 'PixelCastleReg', monospace;
+    font-size: 0.95rem;
+    color: #f8acc8;
+    text-decoration: none;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    box-shadow: 0 0 4px #f8acc8;
+    transition: all 0.2s ease;
+  }
+  
+  .nav-header a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 4px #f8acc8;
+  }
+  
+  
   
