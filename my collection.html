@@ -7,53 +7,100 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div id="collection-page" class="page-wrapper">
-      <div class="nav-header">
-      </div>
-  
-      <div class="content-inner">
-        <section class="collection-section">
-          <header>
-              <div class="nav-wrapper">
-                <div class="nav-buttons">
-                  <a href="index.html">
-                    <img class="small-dog-btn" src="assets/buttons/athome-dog-small.jpg" alt="Home" />
-                  </a>
-                  <a href="about.html">
-                    <img class="small-dog-btn" src="assets/buttons/atnext-dog-small.jpg" alt="Next" />
-                  </a>
-                </div>
-              </div>
-            
-              <p class="decorated-title">⊹ ࣪ ˖ ꒰ঌ ♡ ໒꒱ ⊹ ࣪ ˖</p>
-              <h1 class="main-title">My Collection</h1>
-              <h2 class="subtitle">Explore by Category</h2>
-            </header>
-            
-          <div class="category-buttons">
-            <a class="category-btn enter-button" href="20s-30s.html">
-              <img src="assets/collection/20s-30s-thumbnail.jpg" alt="20s–30s" />
-              <span>20s–30s</span>
-            </a>
-            <a class="category-btn enter-button" href="40s-50s.html">
-              <img src="assets/collection/40s-50s-thumbnail.jpg" alt="40s–50s" />
-              <span>40s–50s</span>
-            </a>
-            <a class="category-btn enter-button" href="60s-70s.html">
-              <img src="assets/collection/60s-70s-thumbnail.jpg" alt="60s–70s" />
-              <span>60s–70s</span>
-            </a>
-            <a class="category-btn enter-button" href="80s-90s.html">
-              <img src="assets/collection/80s-90s-thumbnail.jpg" alt="80s–90s" />
-              <span>80s–90s</span>
-            </a>
+  <div id="collection-page" class="page-wrapper">
+    <div class="nav-header"></div>
+    <body>
+        <div class="image-wrapper">
+          <img class="kitten-image" src="assets/images/extra/asciikitten.png" />
+        </div>
+
+    <div class="content-inner">
+      <section class="collection-section">
+        <header>
+          <div class="nav-wrapper">
+            <div class="nav-buttons">
+              <a href="index.html">
+                <img class="small-dog-btn" src="assets/buttons/athome-dog-small.jpg" alt="Home" />
+              </a>
+              <a href="about.html">
+                <img class="small-dog-btn" src="assets/buttons/atnext-dog-small.jpg" alt="Next" />
+              </a>
+            </div>
           </div>
-        </section>
-  
-        <footer>
-          <p>&copy; Made with love and code by Erin Wright .｡*ﾟ+ </p>
-        </footer>
-      </div>
+
+          <p class="decorated-title">⊹ ࣪ ˖ ꒰ঌ ♡ ໒꒱ ⊹ ࣪ ˖</p>
+          <h1 class="main-title">My Collection</h1>
+          <h2 class="subtitle">Explore by Decade</h2>
+        </header>
+
+        <div class="category-buttons">
+          <a class="category-btn enter-button" href="category-20s30s.html">
+            <img 
+              class="animated-thumb" 
+              src="assets/images/20s-1.png"
+              data-images='["assets/images/20s-1.png", "assets/images/20s-2.png", "assets/images/20s-3.png"]'
+              alt="20s–30s" 
+            />
+            <span>20s–30s</span>
+          </a>
+
+          <a class="category-btn enter-button" href="category-40s50s.html">
+            <img 
+              class="animated-thumb" 
+              src="assets/images/40s-1.png"
+              data-images='["assets/images/40s-1.png", "assets/images/40s-2.png", "assets/images/40s-3.png"]'
+              alt="40s–50s" 
+            />
+            <span>40s–50s</span>
+          </a>
+
+          <a class="category-btn enter-button" href="category-60s70s.html">
+            <img 
+              class="animated-thumb" 
+              src="assets/images/antiques/60s-70s/kewpie-1.png"
+              data-images='["assets/images/antiques/60s-70s/kewpie-1.png", "assets/images/antiques/60s-70s/kewpie-2.png", "assets/images/antiques/60s-70s/kewpie-3.png"]'
+              alt="60s–70s" 
+            />
+            <span>60s–70s</span>
+          </a>
+
+          <a class="category-btn enter-button" href="category-80s90s.html">
+            <img 
+              class="animated-thumb" 
+              src="assets/images/80s-1.png"
+              data-images='["assets/images/80s-1.png", "assets/images/80s-2.png", "assets/images/80s-3.png"]'
+              alt="80s–90s" 
+            />
+            <span>80s–90s</span>
+          </a>
+        </div>
+      </section>
+
+      <footer>
+        <p>&copy; Made with love and code by Erin Wright .｡*ﾟ+ </p>
+      </footer>
     </div>
-  </body>
-</html>  
+  </div>
+
+  <script>
+    document.querySelectorAll('.animated-thumb').forEach(img => {
+      const frames = JSON.parse(img.getAttribute('data-images'));
+      let index = 0;
+      let intervalId;
+
+      img.addEventListener('mouseenter', () => {
+        intervalId = setInterval(() => {
+          index = (index + 1) % frames.length;
+          img.src = frames[index];
+        }, 400); 
+      });
+
+      img.addEventListener('mouseleave', () => {
+        clearInterval(intervalId);
+        img.src = frames[0]; 
+        index = 0;
+      });
+    });
+  </script>
+</body>
+</html>
