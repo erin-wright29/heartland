@@ -482,6 +482,11 @@ footer p:hover {
     background-color: #f8acc8;
     color: #006def;
   }
+  .filter-options select:hover {
+    box-shadow: 0 0 10px #f8acc8, 0 0 20px #f8acc8;
+    border-color: #f8acc8;
+    outline: none;
+  }
   
   .page-center-wrapper {
     display: flex;
