@@ -6,13 +6,15 @@
   <title>My Collection — Heartland</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+
+<body id="index-page">
   <div id="collection-page" class="page-wrapper">
     <div class="nav-header"></div>
-    <body>
-        <div class="image-wrapper">
-            <img class="kitten-image" src="assets/images/extra/asciikitten.png" alt="Floating kitten" />
-          </div>          
+
+    <div class="image-wrapper">
+      <img class="kitten-image" src="assets/images/extra/asciikitten.png" alt="Floating kitten" />
+    </div>
+
     <div class="content-inner">
       <section class="collection-section">
         <header>
@@ -36,15 +38,15 @@
         </header>
 
         <div class="category-buttons">
-            <a class="category-btn enter-button" href="category-earlier.html">
-                <img 
-                  class="animated-thumb" 
-                  src="assets/images/earlier.png"
-                  data-images='["assets/images/earlier.png", "assets/images/earlier.png", "assets/images/earlier.png"]'
-                  alt="Earlier!" 
-                />
-                <span>Earlier!</span>
-              </a>
+          <a class="category-btn enter-button" href="category-earlier.html">
+            <img 
+              class="animated-thumb" 
+              src="assets/images/earlier.png"
+              data-images='["assets/images/earlier.png", "assets/images/earlier.png", "assets/images/earlier.png"]'
+              alt="Earlier!" 
+            />
+            <span>Earlier!</span>
+          </a>
           <a class="category-btn enter-button" href="category-20s30s.html">
             <img 
               class="animated-thumb" 
@@ -112,24 +114,19 @@
         index = 0;
       });
     });
-  </script>
 
-<script>
     const filterSelect = document.getElementById('filter-select');
     const itemCards = document.querySelectorAll('.item-card');
-  
-    filterSelect.addEventListener('change', () => {
-      const filterValue = filterSelect.value;
-  
-      itemCards.forEach(card => {
-        if (filterValue === 'all') {
-          card.style.display = 'block';
-        } else {
-          card.style.display = card.classList.contains(filterValue) ? 'block' : 'none';
-        }
+
+    if (filterSelect) {
+      filterSelect.addEventListener('change', () => {
+        const filterValue = filterSelect.value;
+        itemCards.forEach(card => {
+          card.style.display = (filterValue === 'all' || card.classList.contains(filterValue)) ? 'block' : 'none';
+        });
       });
-    });
+    }
   </script>
-  
+
 </body>
 </html>

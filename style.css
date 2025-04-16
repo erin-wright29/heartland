@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: 'LiberationSans-Regular';
-    src: url(assets/fonts/LiberationSans-Regular.ttf);
+    src: url('assets/fonts/LiberationSans-Regular.ttf');
 }
 
 html, body {
@@ -24,7 +24,7 @@ body {
     background-repeat: repeat;
     background-color: #f8acc8;
     font-family: 'PixelCastleReg';
-    color: black;
+    color: #454040;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -33,21 +33,28 @@ body {
     overflow: hidden;
 }
 
+#index-page .nav-wrapper {
+    margin-top: 2.5rem;
+}
+
+#index-page .content-inner {
+    margin-top: 12rem;
+}
+
 .page-wrapper {
     width: 85%;
     max-width: 800px; 
     height: 500px;   
-    margin: 20px auto;
-    padding: 2rem 1rem 1rem;
+    margin: 60px auto; 
+    padding: 3rem 1rem 1rem; 
     background-color: #fdfbfb;
     text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+  }
+  
 
 .content-inner {
     width: 100%;
@@ -55,7 +62,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 7.5rem;
+    margin-top: 10rem; 
 }
 
 .decorated-title, .main-title, .subtitle, .enter-button, .enter-section, .roses img, .nav-buttons {
@@ -335,56 +342,34 @@ body {
     font-family: 'LiberationSans-Regular';
 }
 
-#collection-20s30s.html .page-wrapper {
-    width: 85%;
-    max-width: 900px;
-    max-height: 85vh;
-    overflow-y: auto;
-    margin: 20px auto;
-    padding: 2rem 1rem 1rem;
-    background-color: #fdfbfb;
-    text-align: center;
-    border-radius: 5px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    scroll-behavior: smooth;
-    box-sizing: border-box;
-  }
- 
-  #collection-page .page-wrapper {
+#collection-page .page-wrapper {
+    margin: 0 !important;
+    height: 500px;
     width: 85%;
     max-width: 800px;
-    max-height: 85vh;
-    height: 500px;
-    overflow-y: auto;
-    margin: 20px auto;
     padding: 2rem 1rem 1rem;
     background-color: #fdfbfb;
-    text-align: center;
     border-radius: 5px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    justify-content:flex-start;
+    justify-content: flex-start;
     align-items: center;
-    scroll-behavior: smooth;
-    box-sizing: border-box;
     position: relative;
+    text-align: center;
+    overflow-y: auto; 
+    scroll-behavior: smooth;
   }
-      
-
-#collection-page .content-inner {
+  
+  #collection-page .content-inner {
+    margin-top: 0 !important;
+    padding: 20px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 4rem;
-    padding: 20px;
-}
+  }
 
 #collection-page footer {
     text-align: center;
@@ -413,6 +398,15 @@ footer p:hover {
     filter: drop-shadow(0 0 10px #ffe4e1);
 }
 
+body#collection-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
 .animated-thumb {
     width: 400px;
     height: auto;
@@ -436,11 +430,10 @@ footer p:hover {
     padding: 10px;
     background-color: #fdfbfb;
     text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px #454040(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
     box-sizing: border-box;
   }
-  
   
   .item-card img {
     width: 180px;  
@@ -470,13 +463,13 @@ footer p:hover {
   }
   
   .filter-options {
-    margin-bottom: 20px;
+    margin-bottom: 28px;
     text-align: center;
   }
   
   .filter-options select {
     padding: 0.5rem;
-    font-size: 1rem;
+    font-size: 0.8rem;
     border: 2px solid #f8acc8;
     border-radius: 4px;
     background-color: #f8acc8;
