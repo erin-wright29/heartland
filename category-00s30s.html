@@ -123,12 +123,4 @@
       } else if (sortValue === 'date') {
         sortedCards.sort((a, b) => {
           return parseInt(a.dataset.date) - parseInt(b.dataset.date);
-        });
-      }
-
-      itemGallery.innerHTML = '';
-      sortedCards.forEach(card => itemGallery.appendChild(card));
-    });
-  </script>
-</body>
-</html>
+     
