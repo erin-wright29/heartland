@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Earlier (1800s) Collection | Heartland</title>
+  <title>Earlier Collection | Heartland</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body id="collection-page">
@@ -28,7 +28,7 @@
           </div>
 
           <p class="decorated-title">⊹ ࣪ ˖ ꒰ঌ ♡ ໒꒱ ⊹ ࣪ ˖</p>
-          <h1 class="main-title">80s–90s Collection</h1>
+          <h1 class="main-title">Earlier Collection</h1>
           <h2 class="subtitle">Explore My Collection</h2>
         </header>
 
@@ -54,46 +54,71 @@
         </div>
 
         <div class="item-gallery" id="item-gallery">
-          <div class="item-card All Collectibles Toys" data-date="1995">
-            <img src="assets/images/antiques/80s-90s/beaniebaby.jpeg" alt="Wiener Dog Beanie Baby"/>
+            <div class="item-card All Postcards-Images" data-date="1800">
+                <img src="assets/images/antiques/earlier/ourfavourites.png" alt="Photo Album"/>
+                <div class="item-caption">
+                  <p class="item-title">"Our Favorites" Photo Album</p>
+                  <p class="item-description">1800s photo album filled with large photographs and tintypes.</p>
+                </div>
+              </div>
+
+          <div class="item-card All Postcards-Images" data-date="1800">
+            <img src="assets/images/antiques/earlier/tintype-1.jpeg" alt="Tintype Image #1"/>
             <div class="item-caption">
-              <p class="item-title">Weenie Beanie Baby</p>
-              <p class="item-description">1995 Dachshund Beanie Baby.</p>
+              <p class="item-title">Tintype</p>
+              <p class="item-description">1800s tintype of mother and daughter.</p>
             </div>
           </div>
 
-          <div class="item-card All Collectibles Toys" data-date="1990">
-            <img src="assets/images/antiques/80s-90s/monchhichi.jpeg" alt="Large Kewpie doll" />
+          <div class="item-card All Postcards-Images" data-date="1800">
+            <img src="assets/images/antiques/earlier/tintype-2.jpeg" alt="Tintype Image #2"/>
             <div class="item-caption">
-              <p class="item-title">Monchhichi</p>
-              <p class="item-description">80s-90s Sekiguchi Monchhchi with red boots.</p>
+              <p class="item-title">Tintype</p>
+              <p class="item-description">1800s tintype of a family.</p>
             </div>
           </div>
 
-          <div class="item-card All Collectibles Toys" data-date="1990">
-            <img src="assets/images/antiques/80s-90s/grandmatroll.jpeg" alt="Granny Troll Doll" />
+          <div class="item-card All Postcards-Images" data-date="1800">
+            <img src="assets/images/antiques/earlier/tintype-3.jpeg" alt="Tintype Image #3"/>
             <div class="item-caption">
-              <p class="item-title">Troll Doll Granny</p>
-              <p class="item-description">1990s Russ Troll Doll in a nightgown.</p>
+              <p class="item-title">Tintype</p>
+              <p class="item-description">1800s tintype of a woman.</p>
             </div>
           </div>
-          <div class="item-card All Collectibles Toys" data-date="1990">
-            <img src="assets/images/antiques/80s-90s/babytroll.jpeg" alt="Troll Doll Baby" />
+          <div class="item-card All Postcards-Images" data-date="1800">
+            <img src="assets/images/antiques/earlier/oldphoto-1.jpeg" alt="Old Photo #1"/>
             <div class="item-caption">
-              <p class="item-title">Troll Doll Baby</p>
-              <p class="item-description">1990s Russ Troll Doll with diaper and bib.</p>
+              <p class="item-title">Photograph</p>
+              <p class="item-description">1800s photograph of a girl.</p>
             </div>
           </div>
 
-          <div class="item-card All Collectibles Trolls" data-date="1990">
-            <img src="assets/images/antiques/80s-90s/rainbowtroll.jpeg" alt="Rainbow Troll Doll" />
+          <div class="item-card All Postcards-Images" data-date="1800">
+            <img src="assets/images/antiques/earlier/oldphoto-2.jpeg" alt="Old Photo #2"/>
             <div class="item-caption">
-              <p class="item-title">Troll Doll Rainbow </p>
-              <p class="item-description">1990s rainbow hair Russ Troll Doll.</p>
+              <p class="item-title">Photograph</p>
+              <p class="item-description">1800s photograph of a woman.</p>
+            </div>
+          </div>
+
+          <div class="item-card All Postcards-Images" data-date="1800">
+            <img src="assets/images/antiques/earlier/oldphoto-3.jpeg" alt="Old Photo #3"/>
+            <div class="item-caption">
+              <p class="item-title">Photograph</p>
+              <p class="item-description">1800s photograph of a woman.</p>
+            </div>
+          </div>
+
+          <div class="item-card All Postcards-Images" data-date="1800">
+            <img src="assets/images/antiques/earlier/oldphoto-4.jpeg" alt="Old Photo #4"/>
+            <div class="item-caption">
+              <p class="item-title">Photograph</p>
+              <p class="item-description">1800s photograph of a man.</p>
             </div>
           </div>
       </section>
     </div>
+    <button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
   </div>
 
   <script>
@@ -135,5 +160,14 @@
       sortedCards.forEach(card => itemGallery.appendChild(card));
     });
   </script>
+
+<script>
+    function scrollToTop() {
+      document.querySelector('.page-wrapper').scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  </script>  
 </body>
 </html>

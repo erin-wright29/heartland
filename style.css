@@ -519,6 +519,29 @@ body#collection-page {
     transform: none;
     transition: none;
   }
+  
+  .back-to-top {
+    margin-top: 2rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    font-family: 'LiberationSans-Regular';
+    background-color: #f8acc8;
+    color: #006def;
+    border: 2px solid #f8acc8;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px #f8acc8, 0 0 20px #f8acc8;
+  }
+  
+  .back-to-top:hover {
+    background-color: #ffffff;
+    color: #f8acc8;
+    box-shadow: 0 0 12px #006def, 0 0 24px #006def;
+  }
+  
+
+
 
 
   

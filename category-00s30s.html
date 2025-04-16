@@ -89,6 +89,7 @@
         </div>
       </section>
     </div>
+    <button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
   </div>
 
   <script>
@@ -130,5 +131,14 @@
       sortedCards.forEach(card => itemGallery.appendChild(card));
     });
   </script>
+
+  <script>
+    function scrollToTop() {
+      document.querySelector('.page-wrapper').scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  </script>  
 </body>
 </html>
