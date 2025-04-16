@@ -1,2 +1,2 @@
 # heartland
-Here's my Github repository information for my antique and vintage collection!!! <3
+Here's my Github repos

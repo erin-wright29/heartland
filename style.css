@@ -430,12 +430,17 @@ body#collection-page {
     box-sizing: border-box;
   }
   
-  .item-card img {
-    width: 180px;  
-    height: 180px; 
-    object-fit: cover;
-    border-radius: 8px;
-  }
+    .item-card img {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 8px;
+        image-rendering: auto;
+        image-rendering: crisp-edges;
+        image-rendering: -webkit-optimize-contrast;
+        backface-visibility: hidden;
+        transform: translateZ(0);
+      }
   
   .item-card:hover {
     transform: scale(1.05);
@@ -453,6 +458,7 @@ body#collection-page {
   }
   
   .item-description {
+    font-family: 'LiberationSans-Regular';
     font-size: 0.9rem;
     color: #666;
   }
