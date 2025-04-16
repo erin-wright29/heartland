@@ -37,7 +37,7 @@
           <select id="sort-select">
             <option value="default">Default</option>
             <option value="alphabetical">A–Z</option>
-            <option value="date">Year made</option>
+            <option value="date">Year Made (Oldest-Newest)</option>
           </select>
 
           <label for="filter-select">Filter by:</label>
@@ -73,7 +73,7 @@
           <div class="item-card All Toys" data-date="1940">
             <img src="assets/images/antiques/40s-50s/angus.jpeg" alt="Scottie Stuffed Animal" />
             <div class="item-caption">
-              <p class="item-title">'"Angus" Stuffed Animal Scottie'</p>
+              <p class="item-title">"Angus" Stuffed Animal Scottie</p>
               <p class="item-description">My grandma's 1940s childhood stuffed animal.</p>
             </div>
           </div>
@@ -89,8 +89,32 @@
         <div class="item-card All Misc Collectibles" data-date="1956">
             <img src="assets/images/antiques/40s-50s/camera.jpeg" alt="Zeiss Ikon Contina Camera" />
             <div class="item-caption">
-              <p class="item-title">'Zeiss Ikon Contina Camera'</p>
+              <p class="item-title">Zeiss Ikon Contina Camera</p>
               <p class="item-description">My Great-Great Aunt Ada's camera with Prontor SVS shutter. Made between 1956 & 1958.</p>
+            </div>
+          </div>
+
+          <div class="item-card All Postcards-Images" data-date="1954">
+            <img src="assets/images/antiques/40s-50s/sanddollar.jpeg" alt="Sand Dollar Postcard" />
+            <div class="item-caption">
+              <p class="item-title">"The Legend of the Sand Dollar" Postcard</p>
+              <p class="item-description">1954 postcard from Fort Myers Florida.</p>
+            </div>
+          </div>
+
+          <div class="item-card All Postcards-Images" data-date="1954">
+            <img src="assets/images/antiques/40s-50s/switzerland.jpeg" alt="Switzerland Postcard" />
+            <div class="item-caption">
+              <p class="item-title">Switzerland's First Chairlift Postcard </p>
+              <p class="item-description">1954 postcard from Trubsee-Jochpass, Switzerland.</p>
+            </div>
+          </div>
+
+          <div class="item-card All Postcards-Images" data-date="1956">
+            <img src="assets/images/antiques/40s-50s/bermuda.jpeg" alt="Bermuda Postcard" />
+            <div class="item-caption">
+              <p class="item-title">Bermuda Image Postcard </p>
+              <p class="item-description">1956 postcard from Bermuda.</p>
             </div>
           </div>
       </section>
@@ -129,4 +153,12 @@
       } else if (sortValue === 'date') {
         sortedCards.sort((a, b) => {
           return parseInt(a.dataset.date) - parseInt(b.dataset.date);
- 
+        });
+      }
+
+      itemGallery.innerHTML = '';
+      sortedCards.forEach(card => itemGallery.appendChild(card));
+    });
+  </script>
+</body>
+</html>

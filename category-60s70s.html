@@ -37,7 +37,7 @@
           <select id="sort-select">
             <option value="default">Default</option>
             <option value="alphabetical">A–Z</option>
-            <option value="date">Year made</option>
+            <option value="date">Year Made (Oldest-Newest)</option>
           </select>
 
           <label for="filter-select">Filter by:</label>
@@ -185,4 +185,11 @@
         sortedCards.sort((a, b) => {
           return parseInt(a.dataset.date) - parseInt(b.dataset.date);
         });
-     
+      }
+
+      itemGallery.innerHTML = '';
+      sortedCards.forEach(card => itemGallery.appendChild(card));
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Earlier (1800s) Collection | Heartland</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body id="collection-page">
+  <div class="page-wrapper">
+    <div class="content-inner">
+      <section class="collection-section">
+        <header>
+          <div class="nav-wrapper">
+            <div class="nav-buttons">
+            <a href="my collection.html">
+                <img class="small-dog-btn" src="assets/buttons/backbutton.PNG" alt="Back to My Collection" />
+              <a href="index.html">
+                <img class="small-dog-btn" src="assets/buttons/homebutton-small.PNG" alt="Home" />
+              </a>
+              <a href="about.html">
+                <img class="small-dog-btn" src="assets/buttons/aboutbutton-small.PNG" alt="About" />
+              </a>
+              <a href="resources.html">
+                <img class="small-dog-btn" src="assets/buttons/morebutton-small.PNG" alt="More Resources" />
+              </a>
+            </div>
+          </div>
+
+          <p class="decorated-title">⊹ ࣪ ˖ ꒰ঌ ♡ ໒꒱ ⊹ ࣪ ˖</p>
+          <h1 class="main-title">80s–90s Collection</h1>
+          <h2 class="subtitle">Explore My Collection</h2>
+        </header>
+
+        <div class="filter-options">
+          <label for="sort-select">Sort by:</label>
+          <select id="sort-select">
+            <option value="default">Default</option>
+            <option value="alphabetical">A–Z</option>
+            <option value="date">Year Made (Oldest-Newest)</option>
+          </select>
+
+          <label for="filter-select">Filter by:</label>
+          <select id="filter-select">
+            <option value="All">All</option>
+            <option value="Books">Books</option>
+            <option value="Ceramics">Ceramics</option>
+            <option value="Clothing">Clothing & Accessories</option>
+            <option value="Collectibles">Collectibles</option>
+            <option value="Postcards-Images">Postcards & Images</option>
+            <option value="Toys">Toys</option>
+            <option value="Misc.">Misc.</option>
+          </select>
+        </div>
+
+        <div class="item-gallery" id="item-gallery">
+          <div class="item-card All Collectibles Toys" data-date="1995">
+            <img src="assets/images/antiques/80s-90s/beaniebaby.jpeg" alt="Wiener Dog Beanie Baby"/>
+            <div class="item-caption">
+              <p class="item-title">Weenie Beanie Baby</p>
+              <p class="item-description">1995 Dachshund Beanie Baby.</p>
+            </div>
+          </div>
+
+          <div class="item-card All Collectibles Toys" data-date="1990">
+            <img src="assets/images/antiques/80s-90s/monchhichi.jpeg" alt="Large Kewpie doll" />
+            <div class="item-caption">
+              <p class="item-title">Monchhichi</p>
+              <p class="item-description">80s-90s Sekiguchi Monchhchi with red boots.</p>
+            </div>
+          </div>
+
+          <div class="item-card All Collectibles Toys" data-date="1990">
+            <img src="assets/images/antiques/80s-90s/grandmatroll.jpeg" alt="Granny Troll Doll" />
+            <div class="item-caption">
+              <p class="item-title">Troll Doll Granny</p>
+              <p class="item-description">1990s Russ Troll Doll in a nightgown.</p>
+            </div>
+          </div>
+          <div class="item-card All Collectibles Toys" data-date="1990">
+            <img src="assets/images/antiques/80s-90s/babytroll.jpeg" alt="Troll Doll Baby" />
+            <div class="item-caption">
+              <p class="item-title">Troll Doll Baby</p>
+              <p class="item-description">1990s Russ Troll Doll with diaper and bib.</p>
+            </div>
+          </div>
+
+          <div class="item-card All Collectibles Trolls" data-date="1990">
+            <img src="assets/images/antiques/80s-90s/rainbowtroll.jpeg" alt="Rainbow Troll Doll" />
+            <div class="item-caption">
+              <p class="item-title">Troll Doll Rainbow </p>
+              <p class="item-description">1990s rainbow hair Russ Troll Doll.</p>
+            </div>
+          </div>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    const filterSelect = document.getElementById('filter-select');
+    const sortSelect = document.getElementById('sort-select');
+    const itemGallery = document.getElementById('item-gallery');
+    const itemCards = Array.from(document.querySelectorAll('.item-card'));
+
+    filterSelect.addEventListener('change', () => {
+      const filterValue = filterSelect.value;
+
+      itemCards.forEach(card => {
+        if (filterValue === 'All') {
+          card.style.display = 'block';
+        } else {
+          card.style.display = card.classList.contains(filterValue) ? 'block' : 'none';
+        }
+      });
+    });
+
+    sortSelect.addEventListener('change', () => {
+      const sortValue = sortSelect.value;
+
+      let sortedCards = [...itemCards];
+
+      if (sortValue === 'alphabetical') {
+        sortedCards.sort((a, b) => {
+          const titleA = a.querySelector('.item-title').textContent.toLowerCase();
+          const titleB = b.querySelector('.item-title').textContent.toLowerCase();
+          return titleA.localeCompare(titleB);
+        });
+      } else if (sortValue === 'date') {
+        sortedCards.sort((a, b) => {
+          return parseInt(a.dataset.date) - parseInt(b.dataset.date);
+        });
+      }
+
+      itemGallery.innerHTML = '';
+      sortedCards.forEach(card => itemGallery.appendChild(card));
+    });
+  </script>
+</body>
+</html>

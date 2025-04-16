@@ -14,7 +14,7 @@
           <div class="nav-wrapper">
             <div class="nav-buttons">
               <a href="my collection.html">
-              <img class="small-dog-btn" src="assets/buttons/backbutton.PNG" alt="Back" />
+              <img class="small-dog-btn" src="assets/buttons/backbutton.PNG" alt="Back to My Collection" />
             </a>
               <a href="index.html">
                 <img class="small-dog-btn" src="assets/buttons/homebutton-small.PNG" alt="Home" />
@@ -38,7 +38,7 @@
           <select id="sort-select">
             <option value="default">Default</option>
             <option value="alphabetical">A–Z</option>
-            <option value="date">Year made</option>
+            <option value="date">Year Made (Oldest-Newest)</option>
           </select>
 
           <label for="filter-select">Filter by:</label>
@@ -123,4 +123,12 @@
       } else if (sortValue === 'date') {
         sortedCards.sort((a, b) => {
           return parseInt(a.dataset.date) - parseInt(b.dataset.date);
-     
+        });
+      }
+
+      itemGallery.innerHTML = '';
+      sortedCards.forEach(card => itemGallery.appendChild(card));
+    });
+  </script>
+</body>
+</html>
