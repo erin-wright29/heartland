@@ -378,7 +378,9 @@ body {
     font-size: 0.9rem;
     color: #f8acc8;
 }
-
+#collection-page .nav-wrapper {
+    margin-top: 5rem;
+  }  
 footer p {
     transition: color 0.3s ease, text-decoration 0.3s ease;
 }

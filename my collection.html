@@ -6,15 +6,13 @@
   <title>My Collection — Heartland</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
-<body id="index-page">
+<body>
   <div id="collection-page" class="page-wrapper">
     <div class="nav-header"></div>
-
-    <div class="image-wrapper">
-      <img class="kitten-image" src="assets/images/extra/asciikitten.png" alt="Floating kitten" />
-    </div>
-
+    <body>
+        <div class="image-wrapper">
+            <img class="kitten-image" src="assets/images/extra/asciikitten.png" alt="Floating kitten" />
+          </div>          
     <div class="content-inner">
       <section class="collection-section">
         <header>
@@ -38,30 +36,30 @@
         </header>
 
         <div class="category-buttons">
-          <a class="category-btn enter-button" href="category-earlier.html">
+            <a class="category-btn enter-button" href="category-earlier.html">
+                <img 
+                  class="animated-thumb" 
+                  src="assets/images/antiques/earlier/image-1.png"
+                  data-images='["assets/images/antiques/earlier/image-1.png", "assets/images/antiques/earlier/image-2.png", "assets/images/antiques/earlier/image-3.png"]'
+                  alt="Earlier!" 
+                />
+                <span>Earlier!</span>
+              </a>
+          <a class="category-btn enter-button" href="category-00s30s.html">
             <img 
               class="animated-thumb" 
-              src="assets/images/earlier.png"
-              data-images='["assets/images/earlier.png", "assets/images/earlier.png", "assets/images/earlier.png"]'
-              alt="Earlier!" 
+              src="assets/images/antiques/00s-30s/mirror-1.png"
+              data-images='["assets/images/antiques/00s-30s/mirror-1.png", "assets/images/antiques/00s-30s/mirror-2.png"]'
+              alt="00s–30s" 
             />
-            <span>Earlier!</span>
-          </a>
-          <a class="category-btn enter-button" href="category-20s30s.html">
-            <img 
-              class="animated-thumb" 
-              src="assets/images/20s-1.png"
-              data-images='["assets/images/20s-1.png", "assets/images/20s-2.png", "assets/images/20s-3.png"]'
-              alt="20s–30s" 
-            />
-            <span>20s–30s</span>
+            <span>00s–30s</span>
           </a>
 
           <a class="category-btn enter-button" href="category-40s50s.html">
             <img 
               class="animated-thumb" 
-              src="assets/images/40s-1.png"
-              data-images='["assets/images/40s-1.png", "assets/images/40s-2.png", "assets/images/40s-3.png"]'
+              src="assets/images/antiques/40s-50s/cat-1.png"
+              data-images='["assets/images/antiques/40s-50s/cat-1.png", "assets/images/antiques/40s-50s/cat-2.png", "assets/images/antiques/40s-50s/cat-3.png"]'
               alt="40s–50s" 
             />
             <span>40s–50s</span>
@@ -80,8 +78,8 @@
           <a class="category-btn enter-button" href="category-80s90s.html">
             <img 
               class="animated-thumb" 
-              src="assets/images/80s-1.png"
-              data-images='["assets/images/80s-1.png", "assets/images/80s-2.png", "assets/images/80s-3.png"]'
+              src="assets/images/antiques/80s-90s/troll-1.png"
+              data-images='["assets/images/antiques/80s-90s/troll-1.png", "assets/images/antiques/80s-90s/troll-2.png", "assets/images/antiques/80s-90s/troll-3.png"]'
               alt="80s–90s" 
             />
             <span>80s–90s</span>
@@ -114,19 +112,24 @@
         index = 0;
       });
     });
-
-    const filterSelect = document.getElementById('filter-select');
-    const itemCards = document.querySelectorAll('.item-card');
-
-    if (filterSelect) {
-      filterSelect.addEventListener('change', () => {
-        const filterValue = filterSelect.value;
-        itemCards.forEach(card => {
-          card.style.display = (filterValue === 'all' || card.classList.contains(filterValue)) ? 'block' : 'none';
-        });
-      });
-    }
   </script>
 
+<script>
+    const filterSelect = document.getElementById('filter-select');
+    const itemCards = document.querySelectorAll('.item-card');
+  
+    filterSelect.addEventListener('change', () => {
+      const filterValue = filterSelect.value;
+  
+      itemCards.forEach(card => {
+        if (filterValue === 'all') {
+          card.style.display = 'block';
+        } else {
+          card.style.display = card.classList.contains(filterValue) ? 'block' : 'none';
+        }
+      });
+    });
+  </script>
+  
 </body>
 </html>
