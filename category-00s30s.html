@@ -123,4 +123,27 @@
       if (sortValue === 'alphabetical') {
         sortedCards.sort((a, b) => {
           const titleA = a.querySelector('.item-title').textContent.toLowerCase();
-          const ti
+          const titleB = b.querySelector('.item-title').textContent.toLowerCase();
+          return titleA.localeCompare(titleB);
+        });
+      } else if (sortValue === 'date') {
+        sortedCards.sort((a, b) => {
+          return parseInt(a.dataset.date) - parseInt(b.dataset.date);
+        });
+      }
+
+      itemGallery.innerHTML = '';
+      sortedCards.forEach(card => itemGallery.appendChild(card));
+    });
+  </script>
+
+  <script>
+    function scrollToTop() {
+      document.querySelector('.page-wrapper').scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  </script>  
+</body>
+</html>
