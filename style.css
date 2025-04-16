@@ -179,7 +179,7 @@ marquee {
 .deer-image {
     position: absolute;
     top: 202px;
-    left: 200px;
+    left: 220px;
     width: 275px;
     height: auto;
     z-index: 2;
@@ -191,7 +191,7 @@ marquee {
 .mirror-image {
     position: absolute;
     bottom: 45px;
-    right: 200px;
+    right: 285px;
     width: 250px;
     height: auto;
     z-index: 3;
@@ -201,7 +201,7 @@ marquee {
 .hooves-image {
     position: absolute;
     bottom: 145px;
-    right: 250px;
+    right: 350px;
     width: 350px;
     height: auto;
     z-index: 3;

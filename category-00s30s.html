@@ -15,4 +15,117 @@
             <div class="nav-buttons">
               <a href="index.html">
                 <img class="small-dog-btn" src="assets/buttons/homebutton-small.PNG" alt="Home" />
-  
+              </a>
+              <a href="about.html">
+                <img class="small-dog-btn" src="assets/buttons/aboutbutton-small.PNG" alt="About" />
+              </a>
+              <a href="resources.html">
+                <img class="small-dog-btn" src="assets/buttons/morebutton-small.PNG" alt="More Resources" />
+              </a>
+            </div>
+          </div>
+
+          <p class="decorated-title">⊹ ࣪ ˖ ꒰ঌ ♡ ໒꒱ ⊹ ࣪ ˖</p>
+          <h1 class="main-title">00s–30s Collection</h1>
+          <h2 class="subtitle">Explore My Collection</h2>
+        </header>
+
+        <div class="filter-options">
+          <label for="sort-select">Sort by:</label>
+          <select id="sort-select">
+            <option value="default">Default</option>
+            <option value="alphabetical">A–Z</option>
+            <option value="date">Year made</option>
+          </select>
+
+          <label for="filter-select">Filter by:</label>
+          <select id="filter-select">
+            <option value="All">All</option>
+            <option value="Books">Books</option>
+            <option value="Ceramics">Ceramics</option>
+            <option value="Clothing">Clothing & Accessories</option>
+            <option value="Collectibles">Collectibles</option>
+            <option value="Postcards-Images">Postcards & Images</option>
+            <option value="Toys">Toys</option>
+            <option value="Misc.">Misc.</option>
+          </select>
+        </div>
+
+        <div class="item-gallery" id="item-gallery">
+          <div class="item-card Misc. All" data-date="1930">
+            <img src="assets/images/antiques/00s-30s/mirror-fullimage.jpeg" alt="vintage-mirror" />
+            <div class="item-caption">
+              <p class="item-title">Sterling Silver Mirror</p>
+              <p class="item-description">1930s 'Sterling' mirror.</p>
+            </div>
+          </div>
+
+          <div class="item-card All Postcards-Images" data-date="1900">
+            <img src="assets/images/antiques/00s-30s/websterandalbee.jpeg" alt="Webster & Albee image" />
+            <div class="item-caption">
+              <p class="item-title">Webster & Albee "The Crescent Girl Reclining"</p>
+              <p class="item-description">Late 1880s to early 1900s 'copy view'.</p>
+            </div>
+          </div>
+
+          <div class="item-card All Postcards-Images" data-date="1916">
+            <img src="assets/images/antiques/00s-30s/Suspension-Bridge-NY.jpeg" alt="Suspension Bridge NY Postcard" />
+            <div class="item-caption">
+              <p class="item-title">Suspension Bridge N.Y. Postcard</p>
+              <p class="item-description">Postcard signed Aug. 7, 1916 with handwritten note on the back.</p>
+            </div>
+          </div>
+
+          <div class="item-card All Books" data-date="1930">
+            <img src="assets/images/antiques/00s-30s/auntmurielbirdbook.jpeg" alt="Bird Book" />
+            <div class="item-caption">
+              <p class="item-title">Bird Guide: Land Birds East of the Rockies</p>
+              <p class="item-description">1930s bird book, noted throughout the 40s & onward by my Great-Great Aunt Muriel.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    const filterSelect = document.getElementById('filter-select');
+    const sortSelect = document.getElementById('sort-select');
+    const itemGallery = document.getElementById('item-gallery');
+    const itemCards = Array.from(document.querySelectorAll('.item-card'));
+
+    filterSelect.addEventListener('change', () => {
+      const filterValue = filterSelect.value;
+
+      itemCards.forEach(card => {
+        if (filterValue === 'All') {
+          card.style.display = 'block';
+        } else {
+          card.style.display = card.classList.contains(filterValue) ? 'block' : 'none';
+        }
+      });
+    });
+
+    sortSelect.addEventListener('change', () => {
+      const sortValue = sortSelect.value;
+
+      let sortedCards = [...itemCards];
+
+      if (sortValue === 'alphabetical') {
+        sortedCards.sort((a, b) => {
+          const titleA = a.querySelector('.item-title').textContent.toLowerCase();
+          const titleB = b.querySelector('.item-title').textContent.toLowerCase();
+          return titleA.localeCompare(titleB);
+        });
+      } else if (sortValue === 'date') {
+        sortedCards.sort((a, b) => {
+          return parseInt(a.dataset.date) - parseInt(b.dataset.date);
+        });
+      }
+
+      itemGallery.innerHTML = '';
+      sortedCards.forEach(card => itemGallery.appendChild(card));
+    });
+  </script>
+</body>
+</html>
