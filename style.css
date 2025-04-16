@@ -219,6 +219,18 @@ marquee {
     pointer-events: none;  
 }
 
+.flowers-image {
+    position: absolute;
+    top: 180px;
+    left: 540px;
+    width: 150px;
+    height: auto;
+    z-index: 2;
+    max-width: calc(100vw - 20px);
+    max-height: calc(100vh - 20px);
+    pointer-events: none;  
+}
+
 .image-wrapper {
     position: absolute;
     top: 0;
@@ -576,7 +588,15 @@ body#collection-page {
     transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
-
+.about-content {
+    font-family: 'LiberationSans-Regular', sans-serif;
+    font-size: 1rem;
+    color: #454040;
+    line-height: 1.6;
+    text-align: left;
+    max-width: 650px;
+  }
+  
 
 
   
