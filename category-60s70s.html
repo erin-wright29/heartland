@@ -13,6 +13,8 @@
         <header>
           <div class="nav-wrapper">
             <div class="nav-buttons">
+            <a href="my collection.html">
+                    <img class="small-dog-btn" src="assets/buttons/backbutton.PNG" alt="Back to My Collection" />
               <a href="index.html">
                 <img class="small-dog-btn" src="assets/buttons/homebutton-small.PNG" alt="Home" />
               </a>
@@ -86,7 +88,7 @@
           <div class="item-card All Clothing" data-date="1960">
             <img src="assets/images/antiques/60s-70s/nightgown.png" alt="Nightgown" />
             <div class="item-caption">
-              <p class="item-title">'Pink Nightgown'</p>
+              <p class="item-title">Pink Nightgown</p>
               <p class="item-description">1960s nightgown with no tag.</p>
             </div>
           </div>
@@ -94,7 +96,7 @@
           <div class="item-card All Collectibles" data-date="1971">
             <img src="assets/images/antiques/60s-70s/kimcasalibeermug.jpeg" alt="Kim Casali Beer Mug" />
             <div class="item-caption">
-              <p class="item-title">'Kim Casali Beer Mug'</p>
+              <p class="item-title">Kim Casali Beer Mug</p>
               <p class="item-description">1971 mug by the Los Angeles Times. Illustration by Kim Casali.</p>
             </div>
           </div>
@@ -118,7 +120,7 @@
         <div class="item-card All Toys" data-date="1979">
             <img src="assets/images/antiques/60s-70s/strawberryshortcake.jpeg" alt="Strawberry Shortcake Doll" />
             <div class="item-caption">
-              <p class="item-title">'Apricot & Hops A Lot Bunny'</p>
+              <p class="item-title">Apricot & Hops A Lot Bunny</p>
               <p class="item-description">1979 Strawberry Shortcake Doll.</p>
             </div>
           </div>
@@ -134,7 +136,7 @@
           <div class="item-card All Misc." data-date="1963">
             <img src="assets/images/antiques/60s-70s/matchbox.jpeg" alt="Ohio Blue Tip Matchbox" />
             <div class="item-caption">
-              <p class="item-title">'Folk Art Matchbox'</p>
+              <p class="item-title">Folk Art Matchbox</p>
               <p class="item-description">1963 matchbox by Ohio Blue Tip.</p>
             </div>
           </div>
@@ -142,7 +144,7 @@
           <div class="item-card All Clothing" data-date="1970">
             <img src="assets/images/antiques/60s-70s/gunnesaxsirt.jpeg" alt="Gunne Sax Skirt" />
             <div class="item-caption">
-              <p class="item-title">'Gunne Sax Skirt'</p>
+              <p class="item-title">Gunne Sax Skirt</p>
               <p class="item-description">1970s Jessica McClintock Gunne Sax skirt.</p>
             </div>
           </div>
@@ -183,11 +185,4 @@
         sortedCards.sort((a, b) => {
           return parseInt(a.dataset.date) - parseInt(b.dataset.date);
         });
-      }
-
-      itemGallery.innerHTML = '';
-      sortedCards.forEach(card => itemGallery.appendChild(card));
-    });
-  </script>
-</body>
-</html>
+     
