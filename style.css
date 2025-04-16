@@ -168,7 +168,7 @@ marquee {
 .spiral-image {
     position: absolute;
     top: 150px;
-    left: 330px;
+    left: 200px;
     width: 190px;
     height: auto;
     z-index: 1;
@@ -179,7 +179,7 @@ marquee {
 .deer-image {
     position: absolute;
     top: 202px;
-    left: 350px;
+    left: 200px;
     width: 275px;
     height: auto;
     z-index: 2;
@@ -191,7 +191,7 @@ marquee {
 .mirror-image {
     position: absolute;
     bottom: 45px;
-    right: 350px;
+    right: 200px;
     width: 250px;
     height: auto;
     z-index: 3;
@@ -201,7 +201,7 @@ marquee {
 .hooves-image {
     position: absolute;
     bottom: 145px;
-    right: 380px;
+    right: 250px;
     width: 350px;
     height: auto;
     z-index: 3;
@@ -371,13 +371,6 @@ body {
     justify-content: center;
   }
 
-#collection-page footer {
-    text-align: center;
-    margin-top: 2rem;
-    padding: 1rem 0;
-    font-size: 0.9rem;
-    color: #f8acc8;
-}
 #collection-page .nav-wrapper {
     margin-top: 5rem;
   }  
