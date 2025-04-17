@@ -9,6 +9,11 @@
     font-family: 'LiberationSans-Regular';
     src: url('assets/fonts/LiberationSans-Regular.ttf');
 }
+@font-face {
+    font-family: 'LiberationSans-Italic';
+    src: url('assets/fonts/LiberationSans-Italic.ttf');
+}
+
 
 /* Main Index (Home) Styles */
 html, body {
@@ -687,19 +692,20 @@ body#collection-page {
     color: #006def;
     text-decoration: underline;
   }
+
+  .about-content p {
+    text-indent: 2em;
+  }
   
   .subtitle {
-    font-family: 'PixelCastleReg', sans-serif;
+    font-family: 'PixelCastleReg';
     font-size: 1.4rem;
     margin: 0.5rem 0 1rem;
     color: #454040;
   }
-  #about-html #resources.html .about-content p {
-    text-indent: 2em;
-  }
   
   .credit-text {
-    font-family: 'LiberationSans-Regular', sans-serif;
+    font-family: 'LiberationSans-Italic';
     font-size: 0.8rem;
     color: #454040;
     line-height: 1.4;
