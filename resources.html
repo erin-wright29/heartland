@@ -1,119 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resources | Heartland</title>
-    <link rel="stylesheet" href="style.css" />
-    <style>
-      details {
-        margin-top: 1.5rem;
-        width: 100%;
-        max-width: 700px;
-        background: #fdfbfb;
-        border: 2px solid #f8acc8;
-        border-radius: 6px;
-        padding: 1rem;
-        font-family: 'LiberationSans-Regular';
-        box-shadow: 0 0 12px #f8acc8;
-        transition: all 0.3s ease;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resources | Heartland</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-      summary {
-        font-family: 'PixelCastleReg';
-        font-weight: bold;
-        font-size: 1.2rem;
-        color: #006def;
-        cursor: pointer;
-        list-style: none;
-        outline: none;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
+<body id="collection-page">
+  <!-- Marquee -->
+  <div class="floating-marquee" role="note" aria-label="Marquee note">
+    <marquee aria-hidden="true">
+      © Made with love and code by Erin Wright .｡*ﾟ+
+    </marquee>
+  </div>
 
-      summary::marker {
-        display: none;
-      }
-
-      details[open] summary {
-        margin-bottom: 0.75rem;
-      }
-
-      .arrow {
-        font-size: 1rem;
-        color: #f8acc8;
-        transition: transform 0.3s ease;
-      }
-
-      details[open] .arrow {
-        transform: rotate(90deg);
-      }
-
-      details ul {
-        padding-left: 1rem;
-        margin: 0;
-        line-height: 1.6;
-      }
-
-      .about-content ul li a {
-        text-decoration: none;
-      }
-
-      .about-content .site-name {
-        color: #454040;
-      }
-
-      .about-content .site-desc {
-        color: #f8acc8;
-        font-weight: bold;
-        transition: color 0.3s ease;
-      }
-
-      .about-content ul li a:hover .site-desc {
-        color: #006def;
-        text-decoration: underline;
-      }
-    </style>
-  </head>
-
-  <body id="collection-page">
-    <div class="floating-marquee">
-      <marquee behavior="scroll" direction="left">
-        © Made with love and code by Erin Wright .｡*ﾟ+
-      </marquee>
-    </div>
-
-    <div class="page-wrapper">
-      <div class="content-inner">
-        <section class="collection-section">
-          <header>
-            <div class="nav-wrapper">
-              <div class="nav-buttons">
-                <a href="index.html">
-                  <img class="small-dog-btn" src="assets/buttons/homebutton-small.PNG" alt="Home" />
-                </a>
-                <a href="my collection.html">
-                  <img class="small-dog-btn" src="assets/buttons/mycollection.png" alt="My Collection" />
-                </a>
-                <a href="about.html">
-                  <img class="small-dog-btn" src="assets/buttons/aboutbutton-small.PNG" alt="About" />
-                </a>
-              </div>
+  <!-- Main page wrapper -->
+  <div class="page-wrapper">
+    <div class="content-inner">
+      <main class="collection-section" role="main" aria-labelledby="resources-title">
+        <!-- Navigation -->
+        <header role="banner" aria-label="Main navigation and page title">
+          <nav class="nav-wrapper" role="navigation" aria-label="Site navigation">
+            <div class="nav-buttons">
+              <a href="index.html" aria-label="Go to Home Page">
+                <img class="small-dog-btn" src="assets/buttons/homebutton-small.PNG" alt="Home" />
+              </a>
+              <a href="my collection.html" aria-label="Go to My Collection">
+                <img class="small-dog-btn" src="assets/buttons/mycollection.png" alt="My Collection" />
+              </a>
+              <a href="about.html" aria-label="Go to About Page">
+                <img class="small-dog-btn" src="assets/buttons/aboutbutton-small.PNG" alt="About" />
+              </a>
             </div>
+          </nav>
 
-            <p class="decorated-title">⊹ ࣪ ˖ ꒰ঌ ♡ ໒꒱ ⊹ ࣪ ˖</p>
-            <h1 class="main-title">Helpful Resources</h1>
-            <h2 class="subtitle">Resources to help you! </h2>
-          </header>
+          <p class="decorated-title" aria-hidden="true">⊹ ࣪ ˖ ꒰ঌ ♡ ໒꒱ ⊹ ࣪ ˖</p>
+          <h1 class="main-title" id="resources-title">Helpful Resources</h1>
+          <h2 class="subtitle">Resources to help you!</h2>
+        </header>
 
-          <div class="about-content" style="font-family: 'LiberationSans-Regular';">
-            <p>
-              Here are some resources I’ve found helpful for researching, sourcing and identifying vintage or antique items, along with some sites for old web lovers!
-            </p>
+        <!-- Resource content -->
+        <section class="about-content" aria-labelledby="resources-description">
+          <h3 id="resources-description" class="visually-hidden">Vintage and Web Resource List</h3>
+          <p>
+            Here are some resources I’ve found helpful for researching, sourcing and identifying vintage or antique items, along with some sites for old web lovers!
+          </p>
 
+          <!-- Vintage Lovers -->
+          <section aria-labelledby="vintage-lovers">
             <details>
-              <summary>‧₊˚ ⋅ For Vintage Lovers <span class="arrow">▶</span></summary>
+              <summary id="vintage-lovers">‧₊˚ ⋅ For Vintage Lovers <span class="arrow">▶</span></summary>
               <ul>
                 <li><a href="https://vintagefashionguild.org/resources/" target="_blank"><span class="site-name">Vintage Fashion Guild</span><span class="site-desc"> – An extensive vintage catalogue forum</span></a></li>
                 <li><a href="https://www.cadacanada.com/" target="_blank"><span class="site-name">The Canadian Antique Dealers Assoc.</span><span class="site-desc"> – Marketplace & information site</span></a></li>
@@ -123,9 +60,12 @@
                 <li><a href="https://www.torontovintageclothingshow.ca/" target="_blank"><span class="site-name">Toronto Vintage Clothing Show</span><span class="site-desc"> – Canada's largest vintage event (Mar. & Oct.)</span></a></li>
               </ul>
             </details>
+          </section>
 
+          <!-- Old Web Lovers -->
+          <section aria-labelledby="old-web-lovers">
             <details>
-              <summary>‧₊˚ ⋅ For Old Web Lovers <span class="arrow">▶</span></summary>
+              <summary id="old-web-lovers">‧₊˚ ⋅ For Old Web Lovers <span class="arrow">▶</span></summary>
               <ul>
                 <li><a href="https://geocities.restorativland.org/" target="_blank"><span class="site-name">GeoCities Archive</span><span class="site-desc"> – Explore GeoCities websites</span></a></li>
                 <li><a href="https://neocities.org/" target="_blank"><span class="site-name">Neocities</span><span class="site-desc"> – Make a site like you would've on GeoCities</span></a></li>
@@ -137,21 +77,25 @@
                 <li><a href="https://oldwebz4youu.tumblr.com/" target="_blank"><span class="site-name">OldWebz4Youu</span><span class="site-desc"> – Tumblr full of old web resources</span></a></li>
               </ul>
             </details>
+          </section>
 
+          <!-- Other Resources -->
+          <section aria-labelledby="other-resources">
             <details>
-              <summary>‧₊˚ ⋅ Other <span class="arrow">▶</span></summary>
+              <summary id="other-resources">‧₊˚ ⋅ Other <span class="arrow">▶</span></summary>
               <ul>
                 <li><a href="https://www.a-s-c.org/" target="_blank"><span class="site-name">A-S-C</span><span class="site-desc"> – Catalogue of open source softwares</span></a></li>
                 <li><a href="https://antiquepatternlibrary.org/" target="_blank"><span class="site-name">Antique Pattern Library</span><span class="site-desc"> – Catalogue of old patterns</span></a></li>
               </ul>
             </details>
+          </section>
 
-            <p>
-              I’ll be updating this page with more helpful links and tools as the website grows!
-            </p>
-          </div>
+          <p>
+            I’ll be updating this page with more helpful links and tools as the website grows!
+          </p>
         </section>
-      </div>
+      </main>
     </div>
-  </body>
+  </div>
+</body>
 </html>

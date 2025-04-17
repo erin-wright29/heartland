@@ -1,3 +1,5 @@
+
+/* Fonts */
 @font-face {
     font-family: 'PixelCastleReg';
     src: url('assets/fonts/Pixelcastle-Regular-copy.otf');
@@ -8,6 +10,7 @@
     src: url('assets/fonts/LiberationSans-Regular.ttf');
 }
 
+/* Main Index (Home) Styles */
 html, body {
     width: 100%;
     height: 100%;
@@ -90,6 +93,7 @@ body {
     color: #454040;
 }
 
+/* Enter Buttons */
 .enter-button {
     display: inline-block;
     margin: 0.5rem 0;
@@ -109,11 +113,13 @@ body {
     transform: scale(1.05);
 }
 
+/* Roses Decor */
 .roses img {
     width: 80px;
     height: auto;
 }
 
+/* Navigation buttons */
 .nav-buttons {
     display: flex;
     justify-content: center;
@@ -135,6 +141,7 @@ body {
     box-shadow: 0 0 16px #f8acc8, 0 0 32px #f8acc8;
 }
 
+/* Additional Features */
 footer {
     width: 85%;
     max-width: 800px;
@@ -150,7 +157,6 @@ footer p {
     transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
-
 marquee {
     margin-top: 1rem;
     padding: 0.5rem 0;
@@ -158,6 +164,7 @@ marquee {
     font-size: 1.2rem;
 }
 
+/* ASCII Elements*/
 .transparent-image-holder {
     width: 100px;
     height: 100px;
@@ -241,6 +248,7 @@ marquee {
     pointer-events: none;
 }
 
+/* My Collection */
 html, body {
     overflow: hidden;
     overscroll-behavior: none;
@@ -271,6 +279,7 @@ body {
     position: relative;
 }
 
+/* My Collection: Navigations */
 .nav-header {
     display: flex;
     justify-content: center;
@@ -297,6 +306,7 @@ body {
     text-shadow: 0 0 4px #f8acc8;
 }
 
+/* My Collection: Buttons */
 .category-btn.active {
     background-color: #006def;
     color: #fff;
@@ -353,6 +363,7 @@ body {
     font-family: 'LiberationSans-Regular';
 }
 
+/* My Collection: Page Styles */
 #collection-page .page-wrapper {
     margin: 0 !important;
     height: 500px;
@@ -385,6 +396,8 @@ body {
 #collection-page .nav-wrapper {
     margin-top: 5rem;
   }  
+
+  /* My Collection: Footer */
 footer p {
     transition: color 0.3s ease, text-decoration 0.3s ease;
 }
@@ -393,6 +406,7 @@ footer p:hover {
     color: #006def;
 }
 
+/* My Collection: More Buttons */
 #collection-page .small-dog-btn {
     max-width: 70px;
     max-height: 70px;
@@ -404,6 +418,7 @@ footer p:hover {
     filter: drop-shadow(0 0 10px #ffe4e1);
 }
 
+/* My Collection: Item Gallery */
 body#collection-page {
     display: flex;
     justify-content: center;
@@ -419,6 +434,7 @@ body#collection-page {
     transition: transform 0.3s ease;
 }
 
+/* Category: Items */
 .item-gallery {
     display: flex;
     flex-wrap: wrap;
@@ -441,17 +457,17 @@ body#collection-page {
     box-sizing: border-box;
   }
   
-    .item-card img {
-        width: 180px;
-        height: 180px;
-        object-fit: cover;
-        border-radius: 8px;
-        image-rendering: auto;
-        image-rendering: crisp-edges;
-        image-rendering: -webkit-optimize-contrast;
-        backface-visibility: hidden;
-        transform: translateZ(0);
-      }
+ .item-card img {
+   width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+   image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+   backface-visibility: hidden;
+  transform: translateZ(0);
+     }
   
   .item-card:hover {
     transform: scale(1.05);
@@ -473,7 +489,8 @@ body#collection-page {
     font-size: 0.9rem;
     color: #666;
   }
-  
+
+/* Category: Filter & Sort */
   .filter-options {
     margin-bottom: 28px;
     text-align: center;
@@ -493,6 +510,7 @@ body#collection-page {
     outline: none;
   }
   
+  /* Category: Wrapper Issue fixes */
   .page-center-wrapper {
     display: flex;
     justify-content: center;
@@ -531,6 +549,7 @@ body#collection-page {
     transition: none;
   }
 
+/* Category: Back to Top, Marquee & Footer */
   .back-to-top {
     margin-top: 2rem;
     padding: 0.6rem 1.2rem;
@@ -571,7 +590,7 @@ body#collection-page {
     backdrop-filter: blur(3px);
     text-align: center;
   }
-  
+
  #collection-page footer {
     width: 85%;
     max-width: 800px;
@@ -587,7 +606,7 @@ body#collection-page {
 #collection-page footer p {
     transition: color 0.3s ease, text-decoration 0.3s ease;
 }
-
+/* About: Main Content */
 .about-content {
     font-family: 'LiberationSans-Regular', sans-serif;
     font-size: 1rem;
@@ -626,7 +645,8 @@ body#collection-page {
   summary::marker {
     display: none;
   }
-  
+
+  /* Resources: Drop down */
   .arrow {
     font-size: 1rem;
     color: #f8acc8;
@@ -640,7 +660,8 @@ body#collection-page {
   details[open] summary {
     margin-bottom: 0.75rem;
   }
-  
+
+  /* Resources: Style setting for websites */
   .about-content ul {
     padding-left: 1rem;
     margin: 0;
@@ -666,4 +687,6 @@ body#collection-page {
     color: #006def;
     text-decoration: underline;
   }
+  
+  /* Code snippets from https://github.com/lange-lange?tab=repositories, https://www.w3schools.com/, https://goblin-heart.net/sadgrl/
   

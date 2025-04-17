@@ -7,46 +7,53 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body id="collection-page">
-    <div class="floating-marquee">
-        <marquee behavior="scroll" direction="left">
-         © Made with love and code by Erin Wright .｡*ﾟ+
-        </marquee>
-      </div>    
+
+  <!-- Marquee -->
+  <div class="floating-marquee" role="note" aria-label="Marquee note">
+    <marquee aria-hidden="true">
+      © Made with love and code by Erin Wright .｡*ﾟ+
+    </marquee>
+  </div>
+
   <div class="page-wrapper">
     <div class="content-inner">
-      <section class="collection-section">
-        <header>
-          <div class="nav-wrapper">
+      <main class="collection-section" role="main" aria-labelledby="page-title">
+
+        <!-- Navigation -->
+        <header role="banner" aria-label="Main site header">
+          <nav class="nav-wrapper" role="navigation" aria-label="Site navigation">
             <div class="nav-buttons">
-            <a href="my collection.html">
-                    <img class="small-dog-btn" src="assets/buttons/backbutton.PNG" alt="Back to My Collection" />
-              <a href="index.html">
+              <a href="my collection.html" aria-label="Back to My Collection">
+                <img class="small-dog-btn" src="assets/buttons/backbutton.PNG" alt="Back" />
+              </a>
+              <a href="index.html" aria-label="Home">
                 <img class="small-dog-btn" src="assets/buttons/homebutton-small.PNG" alt="Home" />
               </a>
-              <a href="about.html">
+              <a href="about.html" aria-label="About Heartland">
                 <img class="small-dog-btn" src="assets/buttons/aboutbutton-small.PNG" alt="About" />
               </a>
-              <a href="resources.html">
-                <img class="small-dog-btn" src="assets/buttons/morebutton-small.PNG" alt="More Resources" />
+              <a href="resources.html" aria-label="More Resources">
+                <img class="small-dog-btn" src="assets/buttons/morebutton-small.PNG" alt="Resources" />
               </a>
             </div>
-          </div>
+          </nav>
 
-          <p class="decorated-title">⊹ ࣪ ˖ ꒰ঌ ♡ ໒꒱ ⊹ ࣪ ˖</p>
-          <h1 class="main-title">40s–50s Collection</h1>
+          <p class="decorated-title" aria-hidden="true">⊹ ࣪ ˖ ꒰ঌ ♡ ໒꒱ ⊹ ࣪ ˖</p>
+          <h1 class="main-title" id="page-title">40s–50s Collection</h1>
           <h2 class="subtitle">Explore My Collection</h2>
         </header>
 
-        <div class="filter-options">
+        <!-- Filters -->
+        <section class="filter-options" aria-label="Sort and filter options">
           <label for="sort-select">Sort by:</label>
-          <select id="sort-select">
+          <select id="sort-select" aria-label="Sort items by">
             <option value="default">Default</option>
             <option value="alphabetical">A–Z</option>
-            <option value="date">Year Made (Oldest-Newest)</option>
+            <option value="date">Year Made (Oldest–Newest)</option>
           </select>
 
           <label for="filter-select">Filter by:</label>
-          <select id="filter-select">
+          <select id="filter-select" aria-label="Filter items by category">
             <option value="All">All</option>
             <option value="Books">Books</option>
             <option value="Ceramics">Ceramics</option>
@@ -56,77 +63,87 @@
             <option value="Toys">Toys</option>
             <option value="Misc.">Misc.</option>
           </select>
-        </div>
+        </section>
 
-        <div class="item-gallery" id="item-gallery">
-          <div class="item-card All Ceramics" data-date="1950">
+        <!-- Gallery -->
+        <section class="item-gallery" id="item-gallery" aria-label="Gallery of items from the 1940s and 1950s">
+          <article class="item-card All Ceramics" data-date="1950">
             <img src="assets/images/antiques/40s-50s/ceramiccat.png" alt="Ceramic Cat" />
             <div class="item-caption">
-              <p class="item-title">Ceramic Sitting Cat</p>
+              <h3 class="item-title">Ceramic Sitting Cat</h3>
               <p class="item-description">1950s ceramic made in Japan.</p>
             </div>
-          </div>
+          </article>
 
-          <div class="item-card All Ceramics Collectibles" data-date="1950">
+          <article class="item-card All Ceramics Collectibles" data-date="1950">
             <img src="assets/images/antiques/40s-50s/ceramic-kewpie.jpeg" alt="Ceramic Kewpie Baby" />
             <div class="item-caption">
-              <p class="item-title">Cermanic Kewpie Baby</p>
+              <h3 class="item-title">Ceramic Kewpie Baby</h3>
               <p class="item-description">50s Lefton figure made in Japan or Taiwan.</p>
             </div>
-          </div>
+          </article>
 
-          <div class="item-card All Toys" data-date="1940">
+          <article class="item-card All Toys" data-date="1940">
             <img src="assets/images/antiques/40s-50s/angus.jpeg" alt="Scottie Stuffed Animal" />
             <div class="item-caption">
-              <p class="item-title">"Angus" Stuffed Animal Scottie</p>
+              <h3 class="item-title">"Angus" Stuffed Animal Scottie</h3>
               <p class="item-description">My grandma's 1940s childhood stuffed animal.</p>
             </div>
-          </div>
+          </article>
 
-          <div class="item-card All Books" data-date="1957">
+          <article class="item-card All Books" data-date="1957">
             <img src="assets/images/antiques/40s-50s/treebook.jpeg" alt="Ontario Tree Book" />
             <div class="item-caption">
-              <p class="item-title">The Forest Trees of Ontario</p>
+              <h3 class="item-title">The Forest Trees of Ontario</h3>
               <p class="item-description">1957 tree guide by J.H. White and R.C. Hosie.</p>
             </div>
-          </div>
+          </article>
 
-        <div class="item-card All Misc Collectibles" data-date="1956">
+          <article class="item-card All Misc Collectibles" data-date="1956">
             <img src="assets/images/antiques/40s-50s/camera.jpeg" alt="Zeiss Ikon Contina Camera" />
             <div class="item-caption">
-              <p class="item-title">Zeiss Ikon Contina Camera</p>
+              <h3 class="item-title">Zeiss Ikon Contina Camera</h3>
               <p class="item-description">My Great-Great Aunt Ada's camera with Prontor SVS shutter. Made between 1956 & 1958.</p>
             </div>
-          </div>
+          </article>
 
-          <div class="item-card All Postcards-Images" data-date="1954">
+          <article class="item-card All Postcards-Images" data-date="1954">
             <img src="assets/images/antiques/40s-50s/sanddollar.jpeg" alt="Sand Dollar Postcard" />
             <div class="item-caption">
-              <p class="item-title">"The Legend of the Sand Dollar" Postcard</p>
+              <h3 class="item-title">"The Legend of the Sand Dollar" Postcard</h3>
               <p class="item-description">1954 postcard from Fort Myers Florida.</p>
             </div>
-          </div>
+          </article>
 
-          <div class="item-card All Postcards-Images" data-date="1954">
+          <article class="item-card All Postcards-Images" data-date="1954">
             <img src="assets/images/antiques/40s-50s/switzerland.jpeg" alt="Switzerland Postcard" />
             <div class="item-caption">
-              <p class="item-title">Switzerland's First Chairlift Postcard </p>
+              <h3 class="item-title">Switzerland's First Chairlift Postcard</h3>
               <p class="item-description">1954 postcard from Trubsee-Jochpass, Switzerland.</p>
             </div>
-          </div>
+          </article>
 
-          <div class="item-card All Postcards-Images" data-date="1956">
+          <article class="item-card All Postcards-Images" data-date="1956">
             <img src="assets/images/antiques/40s-50s/bermuda.jpeg" alt="Bermuda Postcard" />
             <div class="item-caption">
-              <p class="item-title">Bermuda Image Postcard </p>
+              <h3 class="item-title">Bermuda Image Postcard</h3>
               <p class="item-description">1956 postcard from Bermuda.</p>
             </div>
-          </div>
-      </section>
+          </article>
+        </section>
+
+        <!-- Back to Top Button -->
+        <div class="back-to-top-wrapper" aria-label="Back to top control">
+          <button class="back-to-top" onclick="scrollToTop()" aria-label="Back to top of page">
+            Back to Top
+          </button>
+        </div>
+
+      </main>
     </div>
-    <button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
   </div>
 
+  <!-- Scripts -->
   <script>
     const filterSelect = document.getElementById('filter-select');
     const sortSelect = document.getElementById('sort-select');
@@ -135,45 +152,33 @@
 
     filterSelect.addEventListener('change', () => {
       const filterValue = filterSelect.value;
-
       itemCards.forEach(card => {
-        if (filterValue === 'All') {
-          card.style.display = 'block';
-        } else {
-          card.style.display = card.classList.contains(filterValue) ? 'block' : 'none';
-        }
+        card.style.display = (filterValue === 'All' || card.classList.contains(filterValue)) ? 'block' : 'none';
       });
     });
 
     sortSelect.addEventListener('change', () => {
       const sortValue = sortSelect.value;
-
       let sortedCards = [...itemCards];
 
       if (sortValue === 'alphabetical') {
-        sortedCards.sort((a, b) => {
-          const titleA = a.querySelector('.item-title').textContent.toLowerCase();
-          const titleB = b.querySelector('.item-title').textContent.toLowerCase();
-          return titleA.localeCompare(titleB);
-        });
+        sortedCards.sort((a, b) =>
+          a.querySelector('.item-title').textContent.localeCompare(b.querySelector('.item-title').textContent)
+        );
       } else if (sortValue === 'date') {
-        sortedCards.sort((a, b) => {
-          return parseInt(a.dataset.date) - parseInt(b.dataset.date);
-        });
+        sortedCards.sort((a, b) => parseInt(a.dataset.date) - parseInt(b.dataset.date));
       }
 
       itemGallery.innerHTML = '';
       sortedCards.forEach(card => itemGallery.appendChild(card));
     });
-  </script>
 
-<script>
     function scrollToTop() {
       document.querySelector('.page-wrapper').scrollTo({
         top: 0,
         behavior: 'smooth'
       });
     }
-  </script>  
+  </script>
 </body>
 </html>

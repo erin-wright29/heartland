@@ -7,47 +7,53 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body id="collection-page">
-  <div class="floating-marquee">
-    <marquee behavior="scroll" direction="left">
-     © Made with love and code by Erin Wright .｡*ﾟ+
+
+  <!-- Marquee -->
+  <div class="floating-marquee" role="note" aria-label="Marquee note">
+    <marquee aria-hidden="true">
+      © Made with love and code by Erin Wright .｡*ﾟ+
     </marquee>
-  </div>    
+  </div>
+
   <div class="page-wrapper">
     <div class="content-inner">
-      <section class="collection-section">
-        <header>
-          <div class="nav-wrapper">
+      <main class="collection-section" role="main" aria-labelledby="page-title">
+
+        <!-- Navigation -->
+        <header role="banner" aria-label="Site header with navigation">
+          <nav class="nav-wrapper" role="navigation" aria-label="Page navigation">
             <div class="nav-buttons">
-              <a href="my collection.html">
-              <img class="small-dog-btn" src="assets/buttons/backbutton.PNG" alt="Back to My Collection" />
-            </a>
-              <a href="index.html">
+              <a href="my collection.html" aria-label="Back to My Collection">
+                <img class="small-dog-btn" src="assets/buttons/backbutton.PNG" alt="Back" />
+              </a>
+              <a href="index.html" aria-label="Home Page">
                 <img class="small-dog-btn" src="assets/buttons/homebutton-small.PNG" alt="Home" />
               </a>
-              <a href="about.html">
+              <a href="about.html" aria-label="About Page">
                 <img class="small-dog-btn" src="assets/buttons/aboutbutton-small.PNG" alt="About" />
               </a>
-              <a href="resources.html">
+              <a href="resources.html" aria-label="Resources Page">
                 <img class="small-dog-btn" src="assets/buttons/morebutton-small.PNG" alt="More Resources" />
               </a>
             </div>
-          </div>
+          </nav>
 
-          <p class="decorated-title">⊹ ࣪ ˖ ꒰ঌ ♡ ໒꒱ ⊹ ࣪ ˖</p>
-          <h1 class="main-title">00s–30s Collection</h1>
+          <p class="decorated-title" aria-hidden="true">⊹ ࣪ ˖ ꒰ঌ ♡ ໒꒱ ⊹ ࣪ ˖</p>
+          <h1 class="main-title" id="page-title">00s–30s Collection</h1>
           <h2 class="subtitle">Explore My Collection</h2>
         </header>
 
-        <div class="filter-options">
+        <!-- Filters -->
+        <section class="filter-options" aria-label="Sorting and Filtering Tools">
           <label for="sort-select">Sort by:</label>
-          <select id="sort-select">
+          <select id="sort-select" aria-label="Sort items by">
             <option value="default">Default</option>
             <option value="alphabetical">A–Z</option>
-            <option value="date">Year Made (Oldest-Newest)</option>
+            <option value="date">Year Made (Oldest–Newest)</option>
           </select>
 
           <label for="filter-select">Filter by:</label>
-          <select id="filter-select">
+          <select id="filter-select" aria-label="Filter items by type">
             <option value="All">All</option>
             <option value="Books">Books</option>
             <option value="Ceramics">Ceramics</option>
@@ -57,46 +63,55 @@
             <option value="Toys">Toys</option>
             <option value="Misc.">Misc.</option>
           </select>
-        </div>
+        </section>
 
-        <div class="item-gallery" id="item-gallery">
-          <div class="item-card Misc. All" data-date="1930">
-            <img src="assets/images/antiques/00s-30s/mirror-fullimage.jpeg" alt="vintage-mirror" />
+        <!-- Gallery -->
+        <section class="item-gallery" id="item-gallery" aria-label="Gallery of antiques from the 1900s to 1930s">
+          <article class="item-card Misc. All" data-date="1930">
+            <img src="assets/images/antiques/00s-30s/mirror-fullimage.jpeg" alt="Sterling Silver Mirror" />
             <div class="item-caption">
-              <p class="item-title">Sterling Silver Mirror</p>
+              <h3 class="item-title">Sterling Silver Mirror</h3>
               <p class="item-description">1930s 'Sterling' mirror.</p>
             </div>
-          </div>
+          </article>
 
-          <div class="item-card All Postcards-Images" data-date="1900">
+          <article class="item-card All Postcards-Images" data-date="1900">
             <img src="assets/images/antiques/00s-30s/websterandalbee.jpeg" alt="Webster & Albee image" />
             <div class="item-caption">
-              <p class="item-title">Webster & Albee "The Crescent Girl Reclining"</p>
+              <h3 class="item-title">Webster & Albee "The Crescent Girl Reclining"</h3>
               <p class="item-description">Late 1880s to early 1900s 'copy view'.</p>
             </div>
-          </div>
+          </article>
 
-          <div class="item-card All Postcards-Images" data-date="1916">
+          <article class="item-card All Postcards-Images" data-date="1916">
             <img src="assets/images/antiques/00s-30s/Suspension-Bridge-NY.jpeg" alt="Suspension Bridge NY Postcard" />
             <div class="item-caption">
-              <p class="item-title">Suspension Bridge N.Y. Postcard</p>
+              <h3 class="item-title">Suspension Bridge N.Y. Postcard</h3>
               <p class="item-description">Postcard signed Aug. 7, 1916 with handwritten note on the back.</p>
             </div>
-          </div>
+          </article>
 
-          <div class="item-card All Books" data-date="1930">
+          <article class="item-card All Books" data-date="1930">
             <img src="assets/images/antiques/00s-30s/auntmurielbirdbook.jpeg" alt="Bird Book" />
             <div class="item-caption">
-              <p class="item-title">Bird Guide: Land Birds East of the Rockies</p>
+              <h3 class="item-title">Bird Guide: Land Birds East of the Rockies</h3>
               <p class="item-description">1930s bird book, noted throughout the 40s & onward by my Great-Great Aunt Muriel.</p>
             </div>
-          </div>
+          </article>
+        </section>
+
+        <!-- Back to top -->
+        <div class="back-to-top-wrapper" aria-label="Back to top control">
+          <button class="back-to-top" onclick="scrollToTop()" aria-label="Back to top">
+            Back to Top
+          </button>
         </div>
-      </section>
+
+      </main>
     </div>
-    <button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
   </div>
 
+  <!-- Scripts -->
   <script>
     const filterSelect = document.getElementById('filter-select');
     const sortSelect = document.getElementById('sort-select');
@@ -105,19 +120,13 @@
 
     filterSelect.addEventListener('change', () => {
       const filterValue = filterSelect.value;
-
       itemCards.forEach(card => {
-        if (filterValue === 'All') {
-          card.style.display = 'block';
-        } else {
-          card.style.display = card.classList.contains(filterValue) ? 'block' : 'none';
-        }
+        card.style.display = (filterValue === 'All' || card.classList.contains(filterValue)) ? 'block' : 'none';
       });
     });
 
     sortSelect.addEventListener('change', () => {
       const sortValue = sortSelect.value;
-
       let sortedCards = [...itemCards];
 
       if (sortValue === 'alphabetical') {
@@ -127,23 +136,16 @@
           return titleA.localeCompare(titleB);
         });
       } else if (sortValue === 'date') {
-        sortedCards.sort((a, b) => {
-          return parseInt(a.dataset.date) - parseInt(b.dataset.date);
-        });
+        sortedCards.sort((a, b) => parseInt(a.dataset.date) - parseInt(b.dataset.date));
       }
 
       itemGallery.innerHTML = '';
       sortedCards.forEach(card => itemGallery.appendChild(card));
     });
-  </script>
 
-  <script>
     function scrollToTop() {
-      document.querySelector('.page-wrapper').scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+      document.querySelector('.page-wrapper').scrollTo({ top: 0, behavior: 'smooth' });
     }
-  </script>  
+  </script>
 </body>
 </html>

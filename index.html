@@ -7,45 +7,55 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="image-wrapper">
-    <img class="spiral-image" src="assets/images/extra/spiral.png" alt="Spiral" />
-    <img class="deer-image" src="assets/images/extra/deer.png" alt="Deer" />
-    <img class="mirror-image" src="assets/images/extra/mirror.png" alt="Mirror" />
-    <img class="hooves-image" src="assets/images/extra/hooves.png" alt="Hooves" />
+
+  <!-- Decorative images -->
+  <div class="image-wrapper" aria-hidden="true" role="presentation">
+    <img class="spiral-image" src="assets/images/extra/spiral.png" alt="" />
+    <img class="deer-image" src="assets/images/extra/deer.png" alt="" />
+    <img class="mirror-image" src="assets/images/extra/mirror.png" alt="" />
+    <img class="hooves-image" src="assets/images/extra/hooves.png" alt="" />
   </div>
 
   <div class="page-wrapper">
     <div class="content-inner">
-      <section class="intro-section">
-        <header>
-          <p class="decorated-title">⊹ ࣪ ˖ ꒰ঌ ♡ ໒꒱ ⊹ ࣪ ˖</p>
-          <h1 class="main-title">Welcome to Heartland</h1>
+      <main class="intro-section" role="main" aria-labelledby="main-heading">
+
+        <!-- Intro Header -->
+        <header role="banner">
+          <p class="decorated-title" aria-hidden="true">⊹ ࣪ ˖ ꒰ঌ ♡ ໒꒱ ⊹ ࣪ ˖</p>
+          <h1 class="main-title" id="main-heading">Welcome to Heartland</h1>
           <h2 class="subtitle">My Digital Antique & Vintage Collection</h2>
         </header>
 
-        <div class="enter-section">
-          <img src="assets/images/extra/foryouLEFT.png" alt="Left Rose" class="rose-img" />
-          <a href="my collection.html" class="enter-button">✶⋆.˚ come on in ˚✶⋆.</a>
-          <img src="assets/images/extra/foryou-copy-right.gif" alt="Right Rose" class="rose-img" />
+        <!-- Entry button with roses -->
+        <div class="enter-section" role="group" aria-label="Enter the collection">
+          <img src="assets/images/extra/foryouLEFT.png" alt="" class="rose-img" aria-hidden="true" />
+          <a href="my collection.html" class="enter-button" aria-label="Enter the Heartland collection">✶⋆.˚ come on in ˚✶⋆.</a>
+          <img src="assets/images/extra/foryou-copy-right.gif" alt="" class="rose-img" aria-hidden="true" />
         </div>
 
-        <div class="nav-wrapper">
+        <!-- Navigation buttons -->
+        <nav class="nav-wrapper" role="navigation" aria-label="Secondary navigation">
           <div class="nav-buttons">
-            <a href="about.html">
+            <a href="about.html" aria-label="About Heartland">
               <img src="assets/buttons/aboutbutton.PNG" alt="About" />
             </a>
-            <a href="resources.html">
+            <a href="resources.html" aria-label="Helpful Resources">
               <img src="assets/buttons/morebutton.PNG" alt="More resources" />
             </a>
           </div>
+        </nav>
+
+        <!-- Marquee -->
+        <div role="note" aria-label="Marquee Note">
+          <marquee aria-hidden="true"> .𖥔 ݁ ₊ ⋆｡˚˚₊‧꒰ა 𓂋 ໒꒱ .𖥔 ݁ ₊ ⋆｡˚˚₊ </marquee>
         </div>
 
-        <marquee> .𖥔 ݁ ₊ ⋆｡˚˚₊‧꒰ა 𓂋 ໒꒱ .𖥔 ݁ ₊ ⋆｡˚˚₊ </marquee>
-
-        <footer>
+        <!-- Footer -->
+        <footer role="contentinfo">
           <p>&copy; Made with love and code by Erin Wright .｡*ﾟ+ </p>
         </footer>
-      </section>
+      </main>
     </div>
   </div>
 </body>

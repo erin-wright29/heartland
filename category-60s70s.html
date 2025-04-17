@@ -7,46 +7,53 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body id="collection-page">
-    <div class="floating-marquee">
-        <marquee behavior="scroll" direction="left">
-         © Made with love and code by Erin Wright .｡*ﾟ+
-        </marquee>
-      </div>    
+
+  <!-- Marquee  -->
+  <div class="floating-marquee" role="note" aria-label="Marquee note">
+    <marquee aria-hidden="true">
+      © Made with love and code by Erin Wright .｡*ﾟ+
+    </marquee>
+  </div>
+
   <div class="page-wrapper">
     <div class="content-inner">
-      <section class="collection-section">
-        <header>
-          <div class="nav-wrapper">
+      <main class="collection-section" role="main" aria-labelledby="page-title">
+
+        <!-- Navigation -->
+        <header role="banner" aria-label="Main site header">
+          <nav class="nav-wrapper" role="navigation" aria-label="Site navigation">
             <div class="nav-buttons">
-            <a href="my collection.html">
-                    <img class="small-dog-btn" src="assets/buttons/backbutton.PNG" alt="Back to My Collection" />
-              <a href="index.html">
+              <a href="my collection.html" aria-label="Back to My Collection">
+                <img class="small-dog-btn" src="assets/buttons/backbutton.PNG" alt="Back" />
+              </a>
+              <a href="index.html" aria-label="Home">
                 <img class="small-dog-btn" src="assets/buttons/homebutton-small.PNG" alt="Home" />
               </a>
-              <a href="about.html">
+              <a href="about.html" aria-label="About Heartland">
                 <img class="small-dog-btn" src="assets/buttons/aboutbutton-small.PNG" alt="About" />
               </a>
-              <a href="resources.html">
-                <img class="small-dog-btn" src="assets/buttons/morebutton-small.PNG" alt="More Resources" />
+              <a href="resources.html" aria-label="More Resources">
+                <img class="small-dog-btn" src="assets/buttons/morebutton-small.PNG" alt="Resources" />
               </a>
             </div>
-          </div>
+          </nav>
 
-          <p class="decorated-title">⊹ ࣪ ˖ ꒰ঌ ♡ ໒꒱ ⊹ ࣪ ˖</p>
-          <h1 class="main-title">60s–70s Collection</h1>
+          <p class="decorated-title" aria-hidden="true">⊹ ࣪ ˖ ꒰ঌ ♡ ໒꒱ ⊹ ࣪ ˖</p>
+          <h1 class="main-title" id="page-title">60s–70s Collection</h1>
           <h2 class="subtitle">Explore My Collection</h2>
         </header>
 
-        <div class="filter-options">
+        <!-- Filters -->
+        <section class="filter-options" aria-label="Sort and filter the collection items">
           <label for="sort-select">Sort by:</label>
-          <select id="sort-select">
+          <select id="sort-select" aria-label="Sort items by">
             <option value="default">Default</option>
             <option value="alphabetical">A–Z</option>
-            <option value="date">Year Made (Oldest-Newest)</option>
+            <option value="date">Year Made (Oldest–Newest)</option>
           </select>
 
           <label for="filter-select">Filter by:</label>
-          <select id="filter-select">
+          <select id="filter-select" aria-label="Filter items by category">
             <option value="All">All</option>
             <option value="Books">Books</option>
             <option value="Ceramics">Ceramics</option>
@@ -56,108 +63,47 @@
             <option value="Toys">Toys</option>
             <option value="Misc.">Misc.</option>
           </select>
-        </div>
+        </section>
 
-        <div class="item-gallery" id="item-gallery">
-          <div class="item-card All Collectibles Toys" data-date="1960">
-            <img src="assets/images/antiques/60s-70s/kewpiemain.jpeg" alt="Kewpie Baby doll"/>
+        <!-- Gallery -->
+        <section class="item-gallery" id="item-gallery" aria-label="Gallery of items from the 1960s and 1970s">
+          <article class="item-card All Collectibles Toys" data-date="1960">
+            <img src="assets/images/antiques/60s-70s/kewpiemain.jpeg" alt="Kewpie Baby doll" />
             <div class="item-caption">
-              <p class="item-title">Kewpie Baby Doll</p>
+              <h3 class="item-title">Kewpie Baby Doll</h3>
               <p class="item-description">1960s Kewpie Baby made in Taiwan.</p>
             </div>
-          </div>
+          </article>
 
-          <div class="item-card All Collectibles Toys" data-date="1960">
-            <img src="assets/images/antiques/60s-70s/largekewpie.jpeg" alt="Large Kewpie doll" />
-            <div class="item-caption">
-              <p class="item-title">Kewpie Baby Doll</p>
-              <p class="item-description">1960s larger Kewpie baby made in Taiwan.</p>
-            </div>
-          </div>
-
-          <div class="item-card All Collectibles Toys" data-date="1960">
-            <img src="assets/images/antiques/60s-70s/kewpiesquishy.jpeg" alt="Small Kewpie doll" />
-            <div class="item-caption">
-              <p class="item-title">Kewpie Baby Doll</p>
-              <p class="item-description">1960s small Kewpie baby with squeaker. Made in Taiwan.</p>
-            </div>
-          </div>
-          <div class="item-card All Ceramics" data-date="1970">
+          <article class="item-card All Ceramics" data-date="1970">
             <img src="assets/images/antiques/60s-70s/deerplanter.jpeg" alt="Ceramic Doe and Fawn Planter" />
             <div class="item-caption">
-              <p class="item-title">Cermanic Doe and Fawn Planter</p>
-              <p class="item-description">70s Shafford planter made in Japan.</p>
+              <h3 class="item-title">Ceramic Doe and Fawn Planter</h3>
+              <p class="item-description">1970s Shafford planter made in Japan.</p>
             </div>
-          </div>
+          </article>
 
-          <div class="item-card All Clothing" data-date="1960">
-            <img src="assets/images/antiques/60s-70s/nightgown.png" alt="Nightgown" />
-            <div class="item-caption">
-              <p class="item-title">Pink Nightgown</p>
-              <p class="item-description">1960s nightgown with no tag.</p>
-            </div>
-          </div>
-
-          <div class="item-card All Collectibles" data-date="1971">
-            <img src="assets/images/antiques/60s-70s/kimcasalibeermug.jpeg" alt="Kim Casali Beer Mug" />
-            <div class="item-caption">
-              <p class="item-title">Kim Casali Beer Mug</p>
-              <p class="item-description">1971 mug by the Los Angeles Times. Illustration by Kim Casali.</p>
-            </div>
-          </div>
-
-          <div class="item-card All Collectibles" data-date="1972">
-            <img src="assets/images/antiques/60s-70s/kimcasaliplate.jpeg" alt="Kim Casali Dish" />
-            <div class="item-caption">
-              <p class="item-title">Kim Casali Dish</p>
-              <p class="item-description">1972 dish by the Los Angeles Times. Illustration by Kim Casali.</p>
-            </div>
-          </div>
-
-          <div class="item-card All Ceramics" data-date="1973">
-            <img src="assets/images/antiques/60s-70s/dogs.jpeg" alt="Ceramic Dogs" />
-            <div class="item-caption">
-              <p class="item-title">Ceramic Dogs</p>
-              <p class="item-description">1973 Lefton (maybe) ceramics. </p>
-            </div>
-          </div>
-
-        <div class="item-card All Toys" data-date="1979">
-            <img src="assets/images/antiques/60s-70s/strawberryshortcake.jpeg" alt="Strawberry Shortcake Doll" />
-            <div class="item-caption">
-              <p class="item-title">Apricot & Hops A Lot Bunny</p>
-              <p class="item-description">1979 Strawberry Shortcake Doll.</p>
-            </div>
-          </div>
-
-          <div class="item-card All Misc." data-date="1970">
-            <img src="assets/images/antiques/60s-70s/germanhouse.jpeg" alt="German Weather House" />
-            <div class="item-caption">
-              <p class="item-title">German Weather House</p> </p>
-              <p class="item-description">1970s working weather house by German brand 'Bambi'.</p>
-            </div>
-          </div>
-
-          <div class="item-card All Misc." data-date="1963">
-            <img src="assets/images/antiques/60s-70s/matchbox.jpeg" alt="Ohio Blue Tip Matchbox" />
-            <div class="item-caption">
-              <p class="item-title">Folk Art Matchbox</p>
-              <p class="item-description">1963 matchbox by Ohio Blue Tip.</p>
-            </div>
-          </div>
-
-          <div class="item-card All Clothing" data-date="1970">
+          <article class="item-card All Clothing" data-date="1970">
             <img src="assets/images/antiques/60s-70s/gunnesaxsirt.jpeg" alt="Gunne Sax Skirt" />
             <div class="item-caption">
-              <p class="item-title">Gunne Sax Skirt</p>
+              <h3 class="item-title">Gunne Sax Skirt</h3>
               <p class="item-description">1970s Jessica McClintock Gunne Sax skirt.</p>
             </div>
-          </div>
-      </section>
+          </article>
+        </section>
+
+        <!-- Back to Top Button -->
+        <div class="back-to-top-wrapper" aria-label="Back to top control">
+          <button class="back-to-top" onclick="scrollToTop()" aria-label="Back to top of page">
+            Back to Top
+          </button>
+        </div>
+
+      </main>
     </div>
-    <button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
   </div>
 
+  <!-- Scripts -->
   <script>
     const filterSelect = document.getElementById('filter-select');
     const sortSelect = document.getElementById('sort-select');
@@ -166,44 +112,34 @@
 
     filterSelect.addEventListener('change', () => {
       const filterValue = filterSelect.value;
-
       itemCards.forEach(card => {
-        if (filterValue === 'All') {
-          card.style.display = 'block';
-        } else {
-          card.style.display = card.classList.contains(filterValue) ? 'block' : 'none';
-        }
+        card.style.display = (filterValue === 'All' || card.classList.contains(filterValue)) ? 'block' : 'none';
       });
     });
 
     sortSelect.addEventListener('change', () => {
       const sortValue = sortSelect.value;
-
       let sortedCards = [...itemCards];
 
       if (sortValue === 'alphabetical') {
-        sortedCards.sort((a, b) => {
-          const titleA = a.querySelector('.item-title').textContent.toLowerCase();
-          const titleB = b.querySelector('.item-title').textContent.toLowerCase();
-          return titleA.localeCompare(titleB);
-        });
+        sortedCards.sort((a, b) =>
+          a.querySelector('.item-title').textContent.localeCompare(b.querySelector('.item-title').textContent)
+        );
       } else if (sortValue === 'date') {
-        sortedCards.sort((a, b) => {
-          return parseInt(a.dataset.date) - parseInt(b.dataset.date);
-        });
+        sortedCards.sort((a, b) => parseInt(a.dataset.date) - parseInt(b.dataset.date));
       }
 
       itemGallery.innerHTML = '';
       sortedCards.forEach(card => itemGallery.appendChild(card));
     });
+
+    function scrollToTop() {
+      document.querySelector('.page-wrapper').scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
   </script>
-    <script>
-        function scrollToTop() {
-          document.querySelector('.page-wrapper').scrollTo({
-            top: 0,
-            behavior: 'smooth'
-          });
-        }
-      </script>  
+
 </body>
 </html>

@@ -7,46 +7,53 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body id="collection-page">
-    <div class="floating-marquee">
-        <marquee behavior="scroll" direction="left">
-         © Made with love and code by Erin Wright .｡*ﾟ+
-        </marquee>
-      </div>    
+  
+  <!-- Marquee -->
+  <div class="floating-marquee" role="note" aria-label="Marquee note">
+    <marquee aria-hidden="true">
+      © Made with love and code by Erin Wright .｡*ﾟ+
+    </marquee>
+  </div>    
+
   <div class="page-wrapper">
     <div class="content-inner">
-      <section class="collection-section">
-        <header>
-          <div class="nav-wrapper">
+      <main class="collection-section" role="main" aria-labelledby="page-title">
+
+        <!-- Navigation -->
+        <header role="banner">
+          <nav class="nav-wrapper" role="navigation" aria-label="Page navigation">
             <div class="nav-buttons">
-            <a href="my collection.html">
-                <img class="small-dog-btn" src="assets/buttons/backbutton.PNG" alt="Back to My Collection" />
-              <a href="index.html">
+              <a href="my collection.html" aria-label="Back to My Collection">
+                <img class="small-dog-btn" src="assets/buttons/backbutton.PNG" alt="Back" />
+              </a>
+              <a href="index.html" aria-label="Home">
                 <img class="small-dog-btn" src="assets/buttons/homebutton-small.PNG" alt="Home" />
               </a>
-              <a href="about.html">
+              <a href="about.html" aria-label="About Heartland">
                 <img class="small-dog-btn" src="assets/buttons/aboutbutton-small.PNG" alt="About" />
               </a>
-              <a href="resources.html">
+              <a href="resources.html" aria-label="Helpful Resources">
                 <img class="small-dog-btn" src="assets/buttons/morebutton-small.PNG" alt="More Resources" />
               </a>
             </div>
-          </div>
+          </nav>
 
-          <p class="decorated-title">⊹ ࣪ ˖ ꒰ঌ ♡ ໒꒱ ⊹ ࣪ ˖</p>
-          <h1 class="main-title">Earlier Collection</h1>
+          <p class="decorated-title" aria-hidden="true">⊹ ࣪ ˖ ꒰ঌ ♡ ໒꒱ ⊹ ࣪ ˖</p>
+          <h1 class="main-title" id="page-title">Earlier Collection</h1>
           <h2 class="subtitle">Explore My Collection</h2>
         </header>
 
-        <div class="filter-options">
+        <!-- Filter -->
+        <section class="filter-options" aria-label="Filter and sort items">
           <label for="sort-select">Sort by:</label>
-          <select id="sort-select">
+          <select id="sort-select" aria-label="Sort items">
             <option value="default">Default</option>
             <option value="alphabetical">A–Z</option>
             <option value="date">Year Made (Oldest-Newest)</option>
           </select>
 
           <label for="filter-select">Filter by:</label>
-          <select id="filter-select">
+          <select id="filter-select" aria-label="Filter items by category">
             <option value="All">All</option>
             <option value="Books">Books</option>
             <option value="Ceramics">Ceramics</option>
@@ -56,76 +63,84 @@
             <option value="Toys">Toys</option>
             <option value="Misc.">Misc.</option>
           </select>
-        </div>
+        </section>
 
-        <div class="item-gallery" id="item-gallery">
-            <div class="item-card All Postcards-Images" data-date="1800">
-                <img src="assets/images/antiques/earlier/ourfavourites.png" alt="Photo Album"/>
-                <div class="item-caption">
-                  <p class="item-title">"Our Favorites" Photo Album</p>
-                  <p class="item-description">1800s photo album filled with large photographs and tintypes.</p>
-                </div>
-              </div>
-
-          <div class="item-card All Postcards-Images" data-date="1800">
-            <img src="assets/images/antiques/earlier/tintype-1.jpeg" alt="Tintype Image #1"/>
+        <!-- Gallery -->
+        <section class="item-gallery" id="item-gallery" aria-label="Gallery of vintage items">
+          
+          <article class="item-card All Postcards-Images" data-date="1800">
+            <img src="assets/images/antiques/earlier/ourfavourites.png" alt="1800s photo album labeled Our Favorites" />
             <div class="item-caption">
-              <p class="item-title">Tintype</p>
+              <h3 class="item-title">"Our Favorites" Photo Album</h3>
+              <p class="item-description">1800s photo album filled with large photographs and tintypes.</p>
+            </div>
+          </article>
+
+          <article class="item-card All Postcards-Images" data-date="1800">
+            <img src="assets/images/antiques/earlier/tintype-1.jpeg" alt="1800s tintype of mother and daughter" />
+            <div class="item-caption">
+              <h3 class="item-title">Tintype</h3>
               <p class="item-description">1800s tintype of mother and daughter.</p>
             </div>
-          </div>
+          </article>
 
-          <div class="item-card All Postcards-Images" data-date="1800">
-            <img src="assets/images/antiques/earlier/tintype-2.jpeg" alt="Tintype Image #2"/>
+          <article class="item-card All Postcards-Images" data-date="1800">
+            <img src="assets/images/antiques/earlier/tintype-2.jpeg" alt="1800s tintype of a family" />
             <div class="item-caption">
-              <p class="item-title">Tintype</p>
+              <h3 class="item-title">Tintype</h3>
               <p class="item-description">1800s tintype of a family.</p>
             </div>
-          </div>
+          </article>
 
-          <div class="item-card All Postcards-Images" data-date="1800">
-            <img src="assets/images/antiques/earlier/tintype-3.jpeg" alt="Tintype Image #3"/>
+          <article class="item-card All Postcards-Images" data-date="1800">
+            <img src="assets/images/antiques/earlier/tintype-3.jpeg" alt="1800s tintype of a woman" />
             <div class="item-caption">
-              <p class="item-title">Tintype</p>
+              <h3 class="item-title">Tintype</h3>
               <p class="item-description">1800s tintype of a woman.</p>
             </div>
-          </div>
-          <div class="item-card All Postcards-Images" data-date="1800">
-            <img src="assets/images/antiques/earlier/oldphoto-1.jpeg" alt="Old Photo #1"/>
+          </article>
+
+          <article class="item-card All Postcards-Images" data-date="1800">
+            <img src="assets/images/antiques/earlier/oldphoto-1.jpeg" alt="1800s photograph of a girl" />
             <div class="item-caption">
-              <p class="item-title">Photograph</p>
+              <h3 class="item-title">Photograph</h3>
               <p class="item-description">1800s photograph of a girl.</p>
             </div>
-          </div>
+          </article>
 
-          <div class="item-card All Postcards-Images" data-date="1800">
-            <img src="assets/images/antiques/earlier/oldphoto-2.jpeg" alt="Old Photo #2"/>
+          <article class="item-card All Postcards-Images" data-date="1800">
+            <img src="assets/images/antiques/earlier/oldphoto-2.jpeg" alt="1800s photograph of a woman" />
             <div class="item-caption">
-              <p class="item-title">Photograph</p>
+              <h3 class="item-title">Photograph</h3>
               <p class="item-description">1800s photograph of a woman.</p>
             </div>
-          </div>
+          </article>
 
-          <div class="item-card All Postcards-Images" data-date="1800">
-            <img src="assets/images/antiques/earlier/oldphoto-3.jpeg" alt="Old Photo #3"/>
+          <article class="item-card All Postcards-Images" data-date="1800">
+            <img src="assets/images/antiques/earlier/oldphoto-3.jpeg" alt="1800s photograph of a woman" />
             <div class="item-caption">
-              <p class="item-title">Photograph</p>
+              <h3 class="item-title">Photograph</h3>
               <p class="item-description">1800s photograph of a woman.</p>
             </div>
-          </div>
+          </article>
 
-          <div class="item-card All Postcards-Images" data-date="1800">
-            <img src="assets/images/antiques/earlier/oldphoto-4.jpeg" alt="Old Photo #4"/>
+          <article class="item-card All Postcards-Images" data-date="1800">
+            <img src="assets/images/antiques/earlier/oldphoto-4.jpeg" alt="1800s photograph of a man" />
             <div class="item-caption">
-              <p class="item-title">Photograph</p>
+              <h3 class="item-title">Photograph</h3>
               <p class="item-description">1800s photograph of a man.</p>
             </div>
-          </div>
-      </section>
+          </article>
+
+        </section>
+      </main>
+
+      <!-- Back to top button -->
+      <button class="back-to-top" onclick="scrollToTop()" aria-label="Back to top of page">Back to Top</button>
     </div>
-    <button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
   </div>
 
+  <!-- Sorting & filtering scripts -->
   <script>
     const filterSelect = document.getElementById('filter-select');
     const sortSelect = document.getElementById('sort-select');
@@ -134,31 +149,23 @@
 
     filterSelect.addEventListener('change', () => {
       const filterValue = filterSelect.value;
-
       itemCards.forEach(card => {
-        if (filterValue === 'All') {
-          card.style.display = 'block';
-        } else {
-          card.style.display = card.classList.contains(filterValue) ? 'block' : 'none';
-        }
+        card.style.display = (filterValue === 'All' || card.classList.contains(filterValue)) ? 'block' : 'none';
       });
     });
 
     sortSelect.addEventListener('change', () => {
       const sortValue = sortSelect.value;
-
       let sortedCards = [...itemCards];
 
       if (sortValue === 'alphabetical') {
-        sortedCards.sort((a, b) => {
-          const titleA = a.querySelector('.item-title').textContent.toLowerCase();
-          const titleB = b.querySelector('.item-title').textContent.toLowerCase();
-          return titleA.localeCompare(titleB);
-        });
+        sortedCards.sort((a, b) =>
+          a.querySelector('.item-title').textContent.localeCompare(
+            b.querySelector('.item-title').textContent
+          )
+        );
       } else if (sortValue === 'date') {
-        sortedCards.sort((a, b) => {
-          return parseInt(a.dataset.date) - parseInt(b.dataset.date);
-        });
+        sortedCards.sort((a, b) => parseInt(a.dataset.date) - parseInt(b.dataset.date));
       }
 
       itemGallery.innerHTML = '';
@@ -166,13 +173,13 @@
     });
   </script>
 
-<script>
+  <script>
     function scrollToTop() {
       document.querySelector('.page-wrapper').scrollTo({
         top: 0,
         behavior: 'smooth'
       });
     }
-  </script>  
+  </script>
 </body>
 </html>

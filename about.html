@@ -1,56 +1,70 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>About | Heartland</title>
-      <link rel="stylesheet" href="style.css" />
-    </head>
-    <body id="collection-page">
-     <div class="floating-marquee">
-         <marquee behavior="scroll" direction="left">
-        ˚୨୧⋆｡˚ ⋆Click "More" for helpful resources!⋆ ˚｡⋆୨୧˚
-        </marquee>
-    </div>    
-      <div class="page-wrapper">
-        <div class="content-inner">
-          <section class="collection-section">
-            <header>
-              <div class="nav-wrapper">
-                <div class="nav-buttons">
-                  <a href="index.html">
-                    <img class="small-dog-btn" src="assets/buttons/homebutton-small.PNG" alt="Home" />
-                  </a>
-                  <a href="my collection.html">
-                    <img class="small-dog-btn" src="assets/buttons/mycollection.png" alt="My Collection" />
-                  </a>
-                  <a href="resources.html">
-                    <img class="small-dog-btn" src="assets/buttons/morebutton-small.PNG" alt="More Resources" />
-                  </a>
-                </div>
-              </div>
-    
-              <p class="decorated-title">⊹ ࣪ ˖ ꒰ঌ ♡ ໒꒱ ⊹ ࣪ ˖</p>
-              <h1 class="main-title">About Heartland</h1>
-              <h2 class="subtitle">Learn More About Heartland</h2>
-            </header>
-    
-            <div class="about-content">
-              <p>
-                Heartland is a digital collection of my personal antique and vintage treasures. Inspired by the charm of old GeoCities sites and kitschy web aesthetics, this project invites you to explore my collection decade by decade. 
-                The name 'Heartland' is a nod to the old GeoCities neighborhoods, where people once built websites to share snapshots of family life, home, and personal stories. Here 'Heartland' functions as a way for me to share my family and personal stories through antiques. It’s still a work in progress - as my collection is pretty extensive - so new items will be added over time. 
-                </p>
-            </p>This site was created as part of a Graphic Design course at OCADU and my first attempt at coding!
-              </p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Heartland</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body id="collection-page">
+
+  <!-- Marquee -->
+  <div class="floating-marquee" role="note" aria-label="Marquee note">
+    <marquee aria-hidden="true">
+      ˚୨୧⋆｡˚ ⋆Click "More" for helpful resources!⋆ ˚｡⋆୨୧˚
+    </marquee>
+  </div>
+
+  <!-- Main content container -->
+  <div class="page-wrapper">
+    <div class="content-inner">
+      <main class="collection-section" role="main" aria-labelledby="about-title">
+
+        <!-- Navigation -->
+        <header role="banner" aria-label="Site navigation and page title">
+          <nav class="nav-wrapper" role="navigation" aria-label="Page navigation">
+            <div class="nav-buttons">
+              <a href="index.html" aria-label="Go to Home Page">
+                <img class="small-dog-btn" src="assets/buttons/homebutton-small.PNG" alt="Home" />
+              </a>
+              <a href="my collection.html" aria-label="Go to My Collection">
+                <img class="small-dog-btn" src="assets/buttons/mycollection.png" alt="My Collection" />
+              </a>
+              <a href="resources.html" aria-label="Go to Resources Page">
+                <img class="small-dog-btn" src="assets/buttons/morebutton-small.PNG" alt="More Resources" />
+              </a>
             </div>
-            <h2 class="subtitle">Learn More About Me</h2>
-            <div class="about-content">
-                <p>
-                    My name is Erin and I'm the creator of Heartland!
-                </p>
-           
-          </section>
-        </div>
-      </div>
-    </body>
-  </html>
+          </nav>
+
+          <p class="decorated-title" aria-hidden="true">⊹ ࣪ ˖ ꒰ঌ ♡ ໒꒱ ⊹ ࣪ ˖</p>
+          <h1 class="main-title" id="about-title">About Heartland</h1>
+          <h2 class="subtitle">Learn More About Heartland</h2>
+        </header>
+
+        <!-- Site Description -->
+        <section class="about-content" aria-labelledby="about-heartland">
+          <h3 id="about-heartland" class="visually-hidden">About Heartland Description</h3>
+          <p>
+            Heartland is a digital collection of my personal antique and vintage treasures. Inspired by the charm of old GeoCities sites and kitschy web aesthetics, this project invites you to explore my collection decade by decade.
+          </p>
+          <p>
+            The name <strong>'Heartland'</strong> is a nod to the old GeoCities neighborhoods, where people once built websites to share snapshots of family life, home, and personal stories. Here, Heartland functions as a way for me to share my family and personal stories through antiques.
+          </p>
+          <p>
+            It’s still a work in progress — as my collection is pretty extensive — so new items will be added over time. This site was created as part of a Graphic Design course at OCADU and is also my first attempt at coding!
+          </p>
+        </section>
+
+        <!-- About Me -->
+        <section class="about-content" aria-labelledby="about-creator">
+          <h2 class="subtitle" id="about-creator">Learn More About Me</h2>
+          <p>
+            My name is Erin and I'm the creator of Heartland!
+          </p>
+        </section>
+
+      </main>
+    </div>
+  </div>
+</body>
+</html>

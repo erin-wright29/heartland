@@ -7,46 +7,54 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body id="collection-page">
-    <div class="floating-marquee">
-        <marquee behavior="scroll" direction="left">
-         © Made with love and code by Erin Wright .｡*ﾟ+
-        </marquee>
-      </div>    
+
+  <!-- Decorative marquee -->
+  <div class="floating-marquee" role="note" aria-label="Marquee note">
+    <marquee aria-hidden="true">
+      © Made with love and code by Erin Wright .｡*ﾟ+
+    </marquee>
+  </div>    
+
   <div class="page-wrapper">
     <div class="content-inner">
-      <section class="collection-section">
-        <header>
-          <div class="nav-wrapper">
+      <main class="collection-section" role="main" aria-labelledby="page-title">
+       
+        <!-- Navigation header -->
+        <header role="banner">
+          <nav class="nav-wrapper" role="navigation" aria-label="Main site navigation">
             <div class="nav-buttons">
-            <a href="my collection.html">
-                <img class="small-dog-btn" src="assets/buttons/backbutton.PNG" alt="Back to My Collection" />
-              <a href="index.html">
+              <a href="my collection.html" aria-label="Back to My Collection">
+                <img class="small-dog-btn" src="assets/buttons/backbutton.PNG" alt="Back" />
+              </a>
+              <a href="index.html" aria-label="Home">
                 <img class="small-dog-btn" src="assets/buttons/homebutton-small.PNG" alt="Home" />
               </a>
-              <a href="about.html">
+              <a href="about.html" aria-label="About Heartland">
                 <img class="small-dog-btn" src="assets/buttons/aboutbutton-small.PNG" alt="About" />
               </a>
-              <a href="resources.html">
-                <img class="small-dog-btn" src="assets/buttons/morebutton-small.PNG" alt="More Resources" />
+              <a href="resources.html" aria-label="More Resources">
+                <img class="small-dog-btn" src="assets/buttons/morebutton-small.PNG" alt="Resources" />
               </a>
             </div>
-          </div>
-
-          <p class="decorated-title">⊹ ࣪ ˖ ꒰ঌ ♡ ໒꒱ ⊹ ࣪ ˖</p>
-          <h1 class="main-title">80s–90s Collection</h1>
+          </nav>
+          
+        <!-- Header -->
+          <p class="decorated-title" aria-hidden="true">⊹ ࣪ ˖ ꒰ঌ ♡ ໒꒱ ⊹ ࣪ ˖</p>
+          <h1 class="main-title" id="page-title">80s–90s Collection</h1>
           <h2 class="subtitle">Explore My Collection</h2>
         </header>
 
-        <div class="filter-options">
+        <!-- Sort and filter -->
+        <section class="filter-options" aria-label="Sort and filter items">
           <label for="sort-select">Sort by:</label>
-          <select id="sort-select">
+          <select id="sort-select" aria-label="Sort items by">
             <option value="default">Default</option>
             <option value="alphabetical">A–Z</option>
-            <option value="date">Year Made (Oldest-Newest)</option>
+            <option value="date">Year Made (Oldest–Newest)</option>
           </select>
 
           <label for="filter-select">Filter by:</label>
-          <select id="filter-select">
+          <select id="filter-select" aria-label="Filter items by category">
             <option value="All">All</option>
             <option value="Books">Books</option>
             <option value="Ceramics">Ceramics</option>
@@ -56,83 +64,90 @@
             <option value="Toys">Toys</option>
             <option value="Misc.">Misc.</option>
           </select>
-        </div>
+        </section>
 
-        <div class="item-gallery" id="item-gallery">
-          <div class="item-card All Collectibles Toys" data-date="1995">
-            <img src="assets/images/antiques/80s-90s/beaniebaby.jpeg" alt="Wiener Dog Beanie Baby"/>
+        <!-- Gallery section -->
+        <section class="item-gallery" id="item-gallery" aria-label="Gallery of 80s–90s items">
+          <article class="item-card All Collectibles Toys" data-date="1995">
+            <img src="assets/images/antiques/80s-90s/beaniebaby.jpeg" alt="1995 Dachshund Beanie Baby" />
             <div class="item-caption">
-              <p class="item-title">Weenie Beanie Baby</p>
+              <h3 class="item-title">Weenie Beanie Baby</h3>
               <p class="item-description">1995 Dachshund Beanie Baby.</p>
             </div>
-          </div>
+          </article>
 
-          <div class="item-card All Collectibles Toys" data-date="1990">
-            <img src="assets/images/antiques/80s-90s/monchhichi.jpeg" alt="Large Kewpie doll" />
+          <article class="item-card All Collectibles Toys" data-date="1990">
+            <img src="assets/images/antiques/80s-90s/monchhichi.jpeg" alt="Sekiguchi Monchhichi doll with red boots" />
             <div class="item-caption">
-              <p class="item-title">Monchhichi</p>
-              <p class="item-description">80s-90s Sekiguchi Monchhchi with red boots.</p>
+              <h3 class="item-title">Monchhichi</h3>
+              <p class="item-description">80s–90s Sekiguchi Monchhichi with red boots.</p>
             </div>
-          </div>
+          </article>
 
-          <div class="item-card All Collectibles Toys" data-date="1990">
-            <img src="assets/images/antiques/80s-90s/grandmatroll.jpeg" alt="Granny Troll Doll" />
+          <article class="item-card All Collectibles Toys" data-date="1990">
+            <img src="assets/images/antiques/80s-90s/grandmatroll.jpeg" alt="Russ Troll Doll in a nightgown" />
             <div class="item-caption">
-              <p class="item-title">Troll Doll Granny</p>
+              <h3 class="item-title">Troll Doll Granny</h3>
               <p class="item-description">1990s Russ Troll Doll in a nightgown.</p>
             </div>
-          </div>
-          <div class="item-card All Collectibles Toys" data-date="1990">
-            <img src="assets/images/antiques/80s-90s/babytroll.jpeg" alt="Troll Doll Baby" />
+          </article>
+
+          <article class="item-card All Collectibles Toys" data-date="1990">
+            <img src="assets/images/antiques/80s-90s/babytroll.jpeg" alt="Troll Doll Baby with diaper" />
             <div class="item-caption">
-              <p class="item-title">Troll Doll Baby</p>
+              <h3 class="item-title">Troll Doll Baby</h3>
               <p class="item-description">1990s Russ Troll Doll with diaper and bib.</p>
             </div>
-          </div>
+          </article>
 
-          <div class="item-card All Collectibles Trolls" data-date="1990">
-            <img src="assets/images/antiques/80s-90s/rainbowtroll.jpeg" alt="Rainbow Troll Doll" />
+          <article class="item-card All Collectibles Trolls" data-date="1990">
+            <img src="assets/images/antiques/80s-90s/rainbowtroll.jpeg" alt="Rainbow hair Russ Troll Doll" />
             <div class="item-caption">
-              <p class="item-title">Troll Doll Rainbow </p>
+              <h3 class="item-title">Troll Doll Rainbow</h3>
               <p class="item-description">1990s rainbow hair Russ Troll Doll.</p>
             </div>
-          </div>
+          </article>
 
-          <div class="item-card All Postcards-Images" data-date="1980">
-            <img src="assets/images/antiques/80s-90s/hotdog.jpeg" alt="Hot Dog Postcard" />
+          <article class="item-card All Postcards-Images" data-date="1980">
+            <img src="assets/images/antiques/80s-90s/hotdog.jpeg" alt="1980s hot dog postcard from Germany" />
             <div class="item-caption">
-              <p class="item-title">Hot Dog Postcard</p>
+              <h3 class="item-title">Hot Dog Postcard</h3>
               <p class="item-description">1980s postcard from Germany. Sent to my mom from her friend.</p>
             </div>
-          </div>
+          </article>
 
-          <div class="item-card All Postcards-Images" data-date="1980">
-            <img src="assets/images/antiques/80s-90s/flintstones.jpeg" alt="Flintstones Postcard" />
+          <article class="item-card All Postcards-Images" data-date="1980">
+            <img src="assets/images/antiques/80s-90s/flintstones.jpeg" alt="Postcard from Flintstones Bedrock City" />
             <div class="item-caption">
-              <p class="item-title">Flintstones Bedrock City</p>
+              <h3 class="item-title">Flintstones Bedrock City</h3>
               <p class="item-description">1980s postcard from Flintstones Bedrock City in B.C.</p>
             </div>
-          </div>
+          </article>
 
-          <div class="item-card All Postcards-Images" data-date="1980s">
-            <img src="assets/images/antiques/80s-90s/calgary.jpeg" alt="Calgary Stampede Postcard" />
+          <article class="item-card All Postcards-Images" data-date="1980">
+            <img src="assets/images/antiques/80s-90s/calgary.jpeg" alt="Postcard from Calgary Stampede" />
             <div class="item-caption">
-              <p class="item-title">Calgary Stampede Postcard</p>
+              <h3 class="item-title">Calgary Stampede Postcard</h3>
               <p class="item-description">Early 1980s postcard from the Calgary Stampede.</p>
             </div>
-          </div>
-          <div class="item-card All Postcards-Images" data-date="1980">
-            <img src="assets/images/antiques/80s-90s/shells.jpeg" alt="Sea Shell Postcard" />
+          </article>
+
+          <article class="item-card All Postcards-Images" data-date="1980">
+            <img src="assets/images/antiques/80s-90s/shells.jpeg" alt="1980s sea shell postcard from Tampa, Florida" />
             <div class="item-caption">
-              <p class="item-title">Sea Shell Postcard</p>
+              <h3 class="item-title">Sea Shell Postcard</h3>
               <p class="item-description">Early 1980s postcard from Tampa, Florida. Sent by my Great-Great Aunt Ada.</p>
             </div>
-          </div>
-      </section>
+          </article>
+        </section>
+      </main>
+
+ <!-- Back to top button -->
+      <button class="back-to-top" onclick="scrollToTop()" aria-label="Back to top of page">Back to Top</button>
     </div>
-    <button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
   </div>
 
+ <!-- Sorting & filtering scripts -->
   <script>
     const filterSelect = document.getElementById('filter-select');
     const sortSelect = document.getElementById('sort-select');
@@ -141,45 +156,35 @@
 
     filterSelect.addEventListener('change', () => {
       const filterValue = filterSelect.value;
-
       itemCards.forEach(card => {
-        if (filterValue === 'All') {
-          card.style.display = 'block';
-        } else {
-          card.style.display = card.classList.contains(filterValue) ? 'block' : 'none';
-        }
+        card.style.display = (filterValue === 'All' || card.classList.contains(filterValue)) ? 'block' : 'none';
       });
     });
 
     sortSelect.addEventListener('change', () => {
       const sortValue = sortSelect.value;
-
       let sortedCards = [...itemCards];
 
       if (sortValue === 'alphabetical') {
-        sortedCards.sort((a, b) => {
-          const titleA = a.querySelector('.item-title').textContent.toLowerCase();
-          const titleB = b.querySelector('.item-title').textContent.toLowerCase();
-          return titleA.localeCompare(titleB);
-        });
+        sortedCards.sort((a, b) =>
+          a.querySelector('.item-title').textContent.localeCompare(
+            b.querySelector('.item-title').textContent
+          )
+        );
       } else if (sortValue === 'date') {
-        sortedCards.sort((a, b) => {
-          return parseInt(a.dataset.date) - parseInt(b.dataset.date);
-        });
+        sortedCards.sort((a, b) => parseInt(a.dataset.date) - parseInt(b.dataset.date));
       }
 
       itemGallery.innerHTML = '';
       sortedCards.forEach(card => itemGallery.appendChild(card));
     });
-  </script>
 
-<script>
     function scrollToTop() {
       document.querySelector('.page-wrapper').scrollTo({
         top: 0,
         behavior: 'smooth'
       });
     }
-  </script>  
+  </script>
 </body>
 </html>
