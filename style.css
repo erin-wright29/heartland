@@ -688,5 +688,23 @@ body#collection-page {
     text-decoration: underline;
   }
   
-  /* Code snippets from https://github.com/lange-lange?tab=repositories, https://www.w3schools.com/, https://goblin-heart.net/sadgrl/
+  .subtitle {
+    font-family: 'PixelCastleReg', sans-serif;
+    font-size: 1.4rem;
+    margin: 0.5rem 0 1rem;
+    color: #454040;
+  }
+  #about-html #resources.html .about-content p {
+    text-indent: 2em;
+  }
   
+  .credit-text {
+    font-family: 'LiberationSans-Regular', sans-serif;
+    font-size: 0.8rem;
+    color: #454040;
+    line-height: 1.4;
+    margin-top: 2rem;
+    text-align: left;
+  }  
+  
+  /* Code snippets from https://github.com/lange-lange?tab=repositories, https://www.w3schools.com/, https://goblin-heart.net/sadgrl/
