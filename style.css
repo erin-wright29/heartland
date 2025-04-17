@@ -745,6 +745,10 @@ body#collection-page {
     display: none;
   }
 
+  #about.html #resources.html .nav-wrapper {
+    margin-top: 5rem;
+  }  
+
   /* Resources: Drop down */
   .arrow {
     font-size: 1rem;
