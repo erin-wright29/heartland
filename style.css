@@ -919,14 +919,19 @@ body#collection-page {
     }
   
     /* ASCII */
-    .spiral-image,
-    .deer-image,
-    .mirror-image,
-    .hooves-image,
-    .kitten-image,
-    .flowers-image {
-      display: none; 
-    }
+    .bowascii-image,
+    .bowascii2-image,
+    .bowduplicate,
+    .deerascii-image,
+    .heartascii-image,
+    .axeascii-image,
+    .spiralsmall-image,
+    .starsascii-image,
+    .heartascii2-image,
+    .horseascii-image {
+  display: none !important;
+}
+
   
     footer {
       font-size: 0.85rem;
