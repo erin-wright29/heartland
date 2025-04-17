@@ -287,7 +287,7 @@ body {
     color: #f8acc8;
     text-decoration: none;
     padding: 0.2rem 0.5rem; 
-    border-radius: 4px;
+    border-radius: 2px;
     box-shadow: 0 0 4px #f8acc8;
     transition: all 0.2s ease;
 }
@@ -342,7 +342,7 @@ body {
     width: 100%;
     height: 80px;
     object-fit: cover;
-    border-radius: 4px;
+    border-radius: 2px;
     margin-bottom: 0.5rem;
 }
 
@@ -360,7 +360,7 @@ body {
     max-width: 800px;
     padding: 2rem 1rem 1rem;
     background-color: #fdfbfb;
-    border-radius: 5px;
+    border-radius: 2px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -483,7 +483,7 @@ body#collection-page {
     padding: 0.5rem;
     font-size: 0.8rem;
     border: 2px solid #f8acc8;
-    border-radius: 4px;
+    border-radius: 2px;
     background-color: #f8acc8;
     color: #006def;
   }
@@ -520,83 +520,4 @@ body#collection-page {
     padding: 2rem 1rem 1rem;
     background-color: #fdfbfb;
     text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-
-  .back-to-top {
-    margin-top: 2rem;
-    padding: 0.6rem 1.2rem;
-    font-size: 1rem;
-    font-family: 'LiberationSans-Regular';
-    background-color: #f8acc8;
-    color: #006def;
-    border: 2px solid #f8acc8;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 10px #f8acc8, 0 0 20px #f8acc8;
-  }
-  
-  .back-to-top:hover {
-    background-color: #ffffff;
-    color: #f8acc8;
-    box-shadow: 0 0 12px #006def, 0 0 24px #006def;
-  }
-
-  .floating-marquee {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 85%;
-    max-width: 800px;
-    z-index: 9999;
-    pointer-events: none;
-  }  
-  
-  .floating-marquee marquee {
-    font-family: 'PixelCastleReg';
-    font-size: 1rem;
-    color: #454040;
-    padding: 0.4rem 0.8rem;
-    box-shadow: 0 0 6px #f8acc8, 0 0 12px #f8acc8;
-    backdrop-filter: blur(3px);
-    text-align: center;
-  }
-  
- #collection-page footer {
-    width: 85%;
-    max-width: 800px;
-    margin-bottom: 1rem;
-    margin: 1rem auto 1rem;
-    padding: 1rem;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #454040;
-  }
-  
-
-#collection-page footer p {
-    transition: color 0.3s ease, text-decoration 0.3s ease;
-}
-
-.about-content {
-    font-family: 'LiberationSans-Regular', sans-serif;
-    font-size: 1rem;
-    color: #454040;
-    line-height: 1.6;
-    text-align: left;
-    max-width: 650px;
-  }
-  
-
-
-  
+    box-shadow: 0 0 10px rgba(0, 0
