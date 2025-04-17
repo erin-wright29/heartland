@@ -127,4 +127,52 @@
   </div>
 
   <script>
-    const filterSelect = document.getElementById(
+    const filterSelect = document.getElementById('filter-select');
+    const sortSelect = document.getElementById('sort-select');
+    const itemGallery = document.getElementById('item-gallery');
+    const itemCards = Array.from(document.querySelectorAll('.item-card'));
+
+    filterSelect.addEventListener('change', () => {
+      const filterValue = filterSelect.value;
+
+      itemCards.forEach(card => {
+        if (filterValue === 'All') {
+          card.style.display = 'block';
+        } else {
+          card.style.display = card.classList.contains(filterValue) ? 'block' : 'none';
+        }
+      });
+    });
+
+    sortSelect.addEventListener('change', () => {
+      const sortValue = sortSelect.value;
+
+      let sortedCards = [...itemCards];
+
+      if (sortValue === 'alphabetical') {
+        sortedCards.sort((a, b) => {
+          const titleA = a.querySelector('.item-title').textContent.toLowerCase();
+          const titleB = b.querySelector('.item-title').textContent.toLowerCase();
+          return titleA.localeCompare(titleB);
+        });
+      } else if (sortValue === 'date') {
+        sortedCards.sort((a, b) => {
+          return parseInt(a.dataset.date) - parseInt(b.dataset.date);
+        });
+      }
+
+      itemGallery.innerHTML = '';
+      sortedCards.forEach(card => itemGallery.appendChild(card));
+    });
+  </script>
+
+<script>
+    function scrollToTop() {
+      document.querySelector('.page-wrapper').scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  </script>  
+</body>
+</html>

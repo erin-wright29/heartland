@@ -128,4 +128,13 @@
   
       itemCards.forEach(card => {
         if (filterValue === 'all') {
-    
+          card.style.display = 'block';
+        } else {
+          card.style.display = card.classList.contains(filterValue) ? 'block' : 'none';
+        }
+      });
+    });
+  </script>
+  
+</body>
+</html>
