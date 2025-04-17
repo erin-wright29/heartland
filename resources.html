@@ -106,4 +106,22 @@
         </section>
         <!-- Back to Top Button -->
          <div class="back-to-top-wrapper" aria-label="Back to top control">
-            <button class="back-to-top" onclick="scrollToTop()" aria-label="B
+            <button class="back-to-top" onclick="scrollToTop()" aria-label="Back to top of page">
+                  Back to Top
+             </button>
+        </div>
+      </main>
+    </div>
+  </div>
+
+    <!-- Scripts -->
+    <script>
+        function scrollToTop() {
+          document.querySelector('.page-wrapper').scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        }
+        </script>
+</body>
+</html>
