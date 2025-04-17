@@ -14,6 +14,14 @@
       © Made with love and code by Erin Wright .｡*ﾟ+
     </marquee>
   </div>
+  
+     <!-- Decorative images -->
+     <div class="image-wrapper" aria-hidden="true" role="presentation">
+        <img class="bowascii-image" src="assets/images/extra/bowascii.png" alt="" />
+        <img class="starsascii-image" src="assets/images/extra/starsascii.png" alt="" />
+        <img class="horseascii-image" src="assets/images/extra/horseascii.png" alt="" />
+        <img class="heartascii2-image" src="assets/images/extra/heartascii2.png" alt="" />
+      </div>
 
   <div class="page-wrapper">
     <div class="content-inner">
@@ -105,80 +113,4 @@
               <h3 class="item-title">Zeiss Ikon Contina Camera</h3>
               <p class="item-description">My Great-Great Aunt Ada's camera with Prontor SVS shutter. Made between 1956 & 1958.</p>
             </div>
-          </article>
-
-          <article class="item-card All Postcards-Images" data-date="1954">
-            <img src="assets/images/antiques/40s-50s/sanddollar.jpeg" alt="Sand Dollar Postcard" />
-            <div class="item-caption">
-              <h3 class="item-title">"The Legend of the Sand Dollar" Postcard</h3>
-              <p class="item-description">1954 postcard from Fort Myers Florida.</p>
-            </div>
-          </article>
-
-          <article class="item-card All Postcards-Images" data-date="1954">
-            <img src="assets/images/antiques/40s-50s/switzerland.jpeg" alt="Switzerland Postcard" />
-            <div class="item-caption">
-              <h3 class="item-title">Switzerland's First Chairlift Postcard</h3>
-              <p class="item-description">1954 postcard from Trubsee-Jochpass, Switzerland.</p>
-            </div>
-          </article>
-
-          <article class="item-card All Postcards-Images" data-date="1956">
-            <img src="assets/images/antiques/40s-50s/bermuda.jpeg" alt="Bermuda Postcard" />
-            <div class="item-caption">
-              <h3 class="item-title">Bermuda Image Postcard</h3>
-              <p class="item-description">1956 postcard from Bermuda.</p>
-            </div>
-          </article>
-        </section>
-
-        <!-- Back to Top Button -->
-        <div class="back-to-top-wrapper" aria-label="Back to top control">
-          <button class="back-to-top" onclick="scrollToTop()" aria-label="Back to top of page">
-            Back to Top
-          </button>
-        </div>
-
-      </main>
-    </div>
-  </div>
-
-  <!-- Scripts -->
-  <script>
-    const filterSelect = document.getElementById('filter-select');
-    const sortSelect = document.getElementById('sort-select');
-    const itemGallery = document.getElementById('item-gallery');
-    const itemCards = Array.from(document.querySelectorAll('.item-card'));
-
-    filterSelect.addEventListener('change', () => {
-      const filterValue = filterSelect.value;
-      itemCards.forEach(card => {
-        card.style.display = (filterValue === 'All' || card.classList.contains(filterValue)) ? 'block' : 'none';
-      });
-    });
-
-    sortSelect.addEventListener('change', () => {
-      const sortValue = sortSelect.value;
-      let sortedCards = [...itemCards];
-
-      if (sortValue === 'alphabetical') {
-        sortedCards.sort((a, b) =>
-          a.querySelector('.item-title').textContent.localeCompare(b.querySelector('.item-title').textContent)
-        );
-      } else if (sortValue === 'date') {
-        sortedCards.sort((a, b) => parseInt(a.dataset.date) - parseInt(b.dataset.date));
-      }
-
-      itemGallery.innerHTML = '';
-      sortedCards.forEach(card => itemGallery.appendChild(card));
-    });
-
-    function scrollToTop() {
-      document.querySelector('.page-wrapper').scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    }
-  </script>
-</body>
-</html>
+         

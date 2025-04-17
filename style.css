@@ -219,28 +219,123 @@ marquee {
     pointer-events: none;
 }
 
-.kitten-image {
+.deerascii-image {
     position: absolute;
-    top: 25px;
-    left: 540px;
-    width: 400px;
+    top: 100px;
+    left: 190px;
+    width: 275px;
     height: auto;
     z-index: 2;
     max-width: calc(100vw - 20px);
     max-height: calc(100vh - 20px);
-    pointer-events: none;  
+    pointer-events: none;
 }
 
-.flowers-image {
+.heartascii-image {
     position: absolute;
-    top: 180px;
-    left: 540px;
+    top: 120px;
+    left: 300px;
     width: 150px;
     height: auto;
     z-index: 2;
     max-width: calc(100vw - 20px);
     max-height: calc(100vh - 20px);
-    pointer-events: none;  
+    pointer-events: none;
+}
+.axeascii-image {
+    position: absolute;
+    bottom: 30px;
+    right: 230px;
+    width: 250px;
+    height: auto;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.spiralsmall-image {
+    position: absolute;
+    bottom: 230px;
+    right: 275px;
+    width: 70px;
+    height: auto;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.bowascii-image {
+    position: absolute;
+    top: 140px;
+    left: 250px;
+    width: 220px;
+    height: auto;
+    z-index: 2;
+    max-width: calc(100vw - 20px);
+    max-height: calc(100vh - 20px);
+    pointer-events: none;
+}
+
+.bowascii2-image {
+    position: absolute;
+    top: 120px;
+    left: 40px;
+    width: 170px;
+    height: auto;
+    z-index: 2;
+    max-width: calc(100vw - 20px);
+    max-height: calc(100vh - 20px);
+    pointer-events: none;
+}
+.bowduplicate {
+    position: absolute;
+    top: 120px;
+    left: 585px;
+    width: 170px;
+    height: auto;
+    z-index: 5;
+    pointer-events: none;
+  }
+  
+.starsascii-image {
+    position: absolute;
+    top: 130px;
+    left: 380px;
+    width: 80px;
+    height: auto;
+    z-index: 2;
+    max-width: calc(100vw - 20px);
+    max-height: calc(100vh - 20px);
+    pointer-events: none;
+}
+
+.heartascii2-image {
+    position: absolute;
+    bottom: 210px;
+    right: 235px;
+    width: 150px;
+    height: auto;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.horseascii-image {
+    position: absolute;
+    bottom: 70px;
+    right: 180px;
+    width: 300px;
+    height: auto;
+    z-index: 3;
+    pointer-events: none;
+}
+.kewpieascii-image {
+    position: absolute;
+    bottom: 100px;
+    right: 170px;
+    width: 275px;
+    height: auto;
+    z-index: 2;
+    max-width: calc(100vw - 20px);
+    max-height: calc(100vh - 20px);
+    pointer-events: none;
 }
 
 .image-wrapper {
@@ -713,7 +808,7 @@ body#collection-page {
     text-align: left;
   }  
 
-  
+
 /* Mobile Optimization Styles */
 
 @media (max-width: 768px) {
@@ -757,11 +852,18 @@ body#collection-page {
       padding: 0.5rem 1rem;
     }
   
-    .about-content {
-      padding: 1rem;
-      font-size: 0.95rem;
-    }
-  
+    .about-wrapper {
+        max-width: 500px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+      
+      .about-content {
+        width: 100%;
+      }
+
+      
     details {
       padding: 0.75rem;
     }
