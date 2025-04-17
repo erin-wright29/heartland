@@ -141,19 +141,4 @@
         sortedCards.sort((a, b) => {
           const titleA = a.querySelector('.item-title').textContent.toLowerCase();
           const titleB = b.querySelector('.item-title').textContent.toLowerCase();
-          return titleA.localeCompare(titleB);
-        });
-      } else if (sortValue === 'date') {
-        sortedCards.sort((a, b) => parseInt(a.dataset.date) - parseInt(b.dataset.date));
-      }
-
-      itemGallery.innerHTML = '';
-      sortedCards.forEach(card => itemGallery.appendChild(card));
-    });
-
-    function scrollToTop() {
-      document.querySelector('.page-wrapper').scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  </script>
-</body>
-</html>
+          return titleA.lo
