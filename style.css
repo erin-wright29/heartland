@@ -943,5 +943,30 @@ body#collection-page {
       text-align: center;
     }
   }
+
+  /* Accessibility features */
+  :focus {
+    outline: 2px solid #f8acc8;
+    box-shadow: 0 0 6px #f8acc8, 0 0 12px #f8acc8;
+    border-radius: 2px;
+  }
+
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #f8acc8;
+    color: #006def;
+    padding: 0.5rem 1rem;
+    font-family: 'LiberationSans-Regular';
+    text-decoration: none;
+    z-index: 10000;
+    transition: top 0.3s ease;
+  }
   
-  /* Code snippets from https://github.com/lange-lange?tab=repositories, https://www.w3schools.com/, https://goblin-heart.net/sadgrl/
+  .skip-link:focus {
+    top: 10px;
+  }
+  
+  
+  /* Code snippets from https://github.com/lange-lange?tab=repositories, https://www.w3schools.com/, https://goblin-heart.net/sadgrl/ */
